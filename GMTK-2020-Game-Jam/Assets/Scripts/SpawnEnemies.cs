@@ -19,7 +19,7 @@ public class SpawnEnemies : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (_timeToNextSpawn < 0)
+        if (_timeToNextSpawn <= 0)
         {
             SpawnEnemy();
             _timeToNextSpawn += spawnDelay;
