@@ -9,15 +9,14 @@ public class SimpleMoveComponent : MonoBehaviour
     private Rigidbody2D _rb;
     
     // Start is called before the first frame update
-    private void Start()
+    private void Awake()
     {
         _rb = gameObject.GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    private void Update()
+    private void Start()
     {
-        Vector2 newPosition = Vector2.MoveTowards(_rb.position, playerTransform.position, speed * Time.deltaTime);
-        _rb.MovePosition(newPosition);
+        Vector3 targetPos = playerTransform.position;
+        _rb.velocity = (targetPos - transform.position).normalized * speed; 
     }
 }
