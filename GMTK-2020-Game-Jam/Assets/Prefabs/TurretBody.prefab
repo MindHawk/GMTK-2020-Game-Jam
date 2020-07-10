@@ -240,7 +240,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 046139925b46db14bbc14a06bb63844d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torque: 0.1
+  projectile: {fileID: 0}
+  torque: 1
+  shotCooldown: 1
 --- !u!1 &9075037339343170359
 GameObject:
   m_ObjectHideFlags: 0
@@ -335,4 +337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 046139925b46db14bbc14a06bb63844d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  torque: -0.1
+  projectile: {fileID: 0}
+  torque: -1
+  shotCooldown: 1

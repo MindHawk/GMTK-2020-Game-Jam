@@ -5,7 +5,13 @@ using UnityEngine;
 public class ShootComponent : MonoBehaviour
 {
     private Rigidbody2D parentRigidBody;
-    public float torque = 3;
+    [SerializeField]
+    private GameObject projectile;
+    [SerializeField]
+    private float torque = 3;
+    [SerializeField]
+    private float shotCooldown = 1;
+    private bool canShoot = true;
 
     private void Awake()
     {
@@ -13,6 +19,17 @@ public class ShootComponent : MonoBehaviour
     }
     public void Shoot()
     {
-        parentRigidBody.AddTorque(torque, ForceMode2D.Impulse);
+        if (canShoot)
+        {
+            canShoot = false;
+            parentRigidBody.AddTorque(torque, ForceMode2D.Impulse);
+            StartCoroutine(ShotCooldown());
+        }
+    }
+
+    private IEnumerator ShotCooldown()
+    {
+        yield return new WaitForSeconds(shotCooldown);
+        canShoot = true;
     }
 }
