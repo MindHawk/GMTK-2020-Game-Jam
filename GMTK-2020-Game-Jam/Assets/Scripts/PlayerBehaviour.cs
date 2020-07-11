@@ -26,7 +26,10 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-        ScoreText.text = "Score: " + Score;
+        if (ScoreText)
+        {
+            ScoreText.text = "Score: " + Score;
+        }
     }
 
     private void Awake()
