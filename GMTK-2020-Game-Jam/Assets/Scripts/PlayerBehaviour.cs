@@ -45,7 +45,7 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 Camera.main.GetComponent<CameraShake>().Shake(.5f, .075f);
             }
-            AudioSource.PlayClipAtPoint(ExplosionSound, transform.position);
+            AudioSource.PlayClipAtPoint(ExplosionSound, transform.position, OptionsContainer.Volume);
             Instantiate(ExplosionParticle, transform.position, Quaternion.identity);
             if (lives > 1)
             {
