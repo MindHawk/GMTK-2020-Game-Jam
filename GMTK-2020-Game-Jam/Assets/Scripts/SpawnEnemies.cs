@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SpawnEnemies : MonoBehaviour
 {
-    public GameObject objectToSpawn;
+    public List<GameObject> objectsToSpawn;
 
     public float spawnDelay = 5;
     public Transform playerTransform;
@@ -30,7 +30,8 @@ public class SpawnEnemies : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        SimpleMoveComponent enemy = Instantiate(objectToSpawn, transform.position, Quaternion.identity).GetComponent<SimpleMoveComponent>();
+
+        SimpleMoveComponent enemy = Instantiate(objectsToSpawn[Random.Range(0, objectsToSpawn.Count)], transform.position, Quaternion.identity).GetComponent<SimpleMoveComponent>();
         enemy.playerTransform = playerTransform;
     }
 }
