@@ -10,9 +10,14 @@ public class PauseGameBehaviour : MonoBehaviour
     [SerializeField]
     private Toggle toggle;
 
-    private void Awake()
+    private void OnEnable()
     {
-        Time.timeScale = 0;
+        Time.timeScale = 0f;
+    }
+    
+    private void OnDisable()
+    {
+        Time.timeScale = 1f;
     }
     public void UpdateVolumeValue()
     {
@@ -27,8 +32,5 @@ public class PauseGameBehaviour : MonoBehaviour
     public void ResumeGame()
     {
         gameObject.SetActive(false);
-        Time.timeScale = 1;
     }
-
-
 }

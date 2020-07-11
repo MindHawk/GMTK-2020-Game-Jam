@@ -30,7 +30,6 @@ public class InputHandler : MonoBehaviour
         }
         if (Input.GetAxis("Pause") != 0)
         {
-            Time.timeScale = 0;
             PauseGame.Invoke();
         }
     }
