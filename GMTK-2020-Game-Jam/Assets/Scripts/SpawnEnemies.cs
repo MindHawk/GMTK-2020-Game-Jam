@@ -10,8 +10,8 @@ public class SpawnEnemies : MonoBehaviour
 
     public float spawnDelay = 7;
     public float spawnVariance = 3; // Spawn time can vary by up to this much
-    public float xVariance;
-    public float yVariance;
+    [HideInInspector] public float xVariance;
+    [HideInInspector] public float yVariance;
 
     private float _timeToNextSpawn;
     // Start is called before the first frame update
