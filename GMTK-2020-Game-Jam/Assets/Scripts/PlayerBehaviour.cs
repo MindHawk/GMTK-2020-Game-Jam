@@ -13,6 +13,10 @@ public class PlayerBehaviour : MonoBehaviour
     private GameObject GameOverParent;
     [HideInInspector]
     public static bool isAlive = true;
+    [SerializeField]
+    private ParticleSystem ExplosionParticle;
+    [SerializeField]
+    private AudioClip ExplosionSound;
 
     private void Awake()
     {
@@ -23,6 +27,12 @@ public class PlayerBehaviour : MonoBehaviour
         if(collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
+            if(Camera.main != null)
+            {
+                Camera.main.GetComponent<CameraShake>().Shake(.5f, .05f);
+            }
+            AudioSource.PlayClipAtPoint(ExplosionSound, transform.position);
+            Instantiate(ExplosionParticle, transform.position, Quaternion.identity);
             if (lives > 1)
             {
                 lives--;

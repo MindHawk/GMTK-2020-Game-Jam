@@ -14,15 +14,16 @@ public class EnemyBehaviourComponent : MonoBehaviour
     {
         if(collision.gameObject.CompareTag(AffectedTag))
         {
+            Death();
             Destroy(this.gameObject);
         }
     }
 
-    private void OnDestroy()
+    private void Death()
     {
         if(Camera.main != null)
         {
-            Camera.main.GetComponent<CameraShake>().Shake(.5f, .05f);
+            Camera.main.GetComponent<CameraShake>().Shake(.25f, .02f);
         }
         AudioSource.PlayClipAtPoint(DeathSound, transform.position);
         Instantiate(DeathParticle, transform.position, Quaternion.identity);
