@@ -22,7 +22,7 @@ public class EnemyBehaviourComponent : MonoBehaviour
     {
         if(Camera.main != null)
         {
-            Camera.main.GetComponent<CameraShake>().Shake(.5f, .2f);
+            Camera.main.GetComponent<CameraShake>().Shake(.5f, .05f);
         }
         AudioSource.PlayClipAtPoint(DeathSound, transform.position);
         Instantiate(DeathParticle, transform.position, Quaternion.identity);
