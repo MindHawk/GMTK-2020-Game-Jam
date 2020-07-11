@@ -6,8 +6,8 @@ public class SpawnEnemies : MonoBehaviour
 {
     public List<GameObject> objectsToSpawn;
 
-    public float spawnDelay = 5;
-    public Transform playerTransform;
+    public float spawnDelay = 7;
+    public float spawnVariance = 3; // Spawn time can vary by up to this much
 
     private float _timeToNextSpawn;
     // Start is called before the first frame update
@@ -23,6 +23,7 @@ public class SpawnEnemies : MonoBehaviour
         {
             SpawnEnemy();
             _timeToNextSpawn += spawnDelay;
+            _timeToNextSpawn += Random.Range(-spawnVariance, spawnVariance);
         }
 
         _timeToNextSpawn -= Time.deltaTime;

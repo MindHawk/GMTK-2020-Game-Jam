@@ -97,5 +97,5 @@ MonoBehaviour:
   objectsToSpawn:
   - {fileID: 8596701873593514276, guid: c16272122bae945419b53698dddd3ae0, type: 3}
   - {fileID: 3663000047243260205, guid: 288b6d26c47916344bcc3d2b1c490a25, type: 3}
-  spawnDelay: 5
-  playerTransform: {fileID: 0}
+  spawnDelay: 7
+  spawnVariance: 3
