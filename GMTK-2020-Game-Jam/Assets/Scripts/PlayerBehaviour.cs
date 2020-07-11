@@ -12,7 +12,7 @@ public class PlayerBehaviour : MonoBehaviour
     public static bool isAlive = true;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if(collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
             if (lives > 0)
