@@ -4892,7 +4892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: abb3ccd5856109d4a860fb819c9ed8bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
+  playerTransformPosition: {x: 0, y: 0}
   speed: 1
 --- !u!114 &1983885588592954237
 MonoBehaviour:
@@ -4907,6 +4907,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AffectedTag: PlayerProjectileBlue
+  DeathParticle: {fileID: 3166519191012352185, guid: 525e5c6cfbe9bdb47b035d9efe556b7f,
+    type: 3}
 --- !u!50 &8596701873593514277
 Rigidbody2D:
   serializedVersion: 4

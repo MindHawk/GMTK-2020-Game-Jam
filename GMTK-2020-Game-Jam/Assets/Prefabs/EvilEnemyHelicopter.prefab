@@ -47,13 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c0f8b6cb2896ba488c0328fc2a33398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTransform: {fileID: 0}
+  playerTransformPosition: {x: 0, y: 0}
   speed: 2
   strafingForce: 4
   strafingSwitchDelay: 1.6
-  timeLeftToStrafe: 0
-  isStrafingLeft: 1
-  firstStrafe: 1
 --- !u!114 &6777957582981825396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67,6 +64,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AffectedTag: PlayerProjectileOrange
+  DeathParticle: {fileID: 3166519191012352185, guid: 525e5c6cfbe9bdb47b035d9efe556b7f,
+    type: 3}
 --- !u!50 &3663000047243260204
 Rigidbody2D:
   serializedVersion: 4
