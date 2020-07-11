@@ -41,7 +41,7 @@ public class PlayerBehaviour : MonoBehaviour
         if(collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
-            if(Camera.main != null)
+            if(Camera.main != null && OptionsContainer.DoScreenShake)
             {
                 Camera.main.GetComponent<CameraShake>().Shake(.5f, .075f);
             }

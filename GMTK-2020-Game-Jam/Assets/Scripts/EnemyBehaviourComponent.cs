@@ -23,11 +23,11 @@ public class EnemyBehaviourComponent : MonoBehaviour
 
     private void Death()
     {
-        if(Camera.main != null)
+        if(Camera.main != null && OptionsContainer.DoScreenShake)
         {
             Camera.main.GetComponent<CameraShake>().Shake(.25f, .02f);
         }
-        AudioSource.PlayClipAtPoint(DeathSound, transform.position);
+        AudioSource.PlayClipAtPoint(DeathSound, transform.position, OptionsContainer.Volume);
         Instantiate(DeathParticle, transform.position, Quaternion.identity);
         PlayerBehaviour.Score += ScoreValue;
     }

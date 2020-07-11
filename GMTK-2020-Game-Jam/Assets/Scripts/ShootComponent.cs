@@ -104,6 +104,6 @@ public class ShootComponent : MonoBehaviour
 
     private void PlaySound()
     {
-        AudioSource.PlayClipAtPoint(FireSound, transform.position);
+        AudioSource.PlayClipAtPoint(FireSound, transform.position, OptionsContainer.Volume);
     }
 }
