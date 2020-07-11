@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransformPosition: {x: 0, y: 0}
-  speed: 2
+  timeToReachPlayer: 12
   strafingForce: 4
   strafingSwitchDelay: 1.6
 --- !u!114 &6777957582981825396
