@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class InputHandler : MonoBehaviour
 {
     public UnityEvent LeftClick = new UnityEvent();
-    public UnityEvent RigthClick = new UnityEvent();
+    public UnityEvent RightClick = new UnityEvent();
 
 
     private void Update()
@@ -25,7 +25,7 @@ public class InputHandler : MonoBehaviour
         }
         if (Input.GetAxis("Fire2") != 0)
         {
-            RigthClick.Invoke();
+            RightClick.Invoke();
         }
     }
 }

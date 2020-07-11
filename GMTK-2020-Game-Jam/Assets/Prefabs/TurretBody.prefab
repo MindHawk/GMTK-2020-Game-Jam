@@ -1701,7 +1701,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  RigthClick:
+  RightClick:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 9075037339343170358}
