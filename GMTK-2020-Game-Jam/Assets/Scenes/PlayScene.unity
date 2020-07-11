@@ -235,6 +235,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1188882043}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &817705969 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3545802057339950825, guid: 76eb37b29c13d484b8832cf23ec2a2ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 2066579381}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd556e4af3ef34146af042c72679088e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &941439639 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3545802057339950825, guid: 76eb37b29c13d484b8832cf23ec2a2ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 1188882043}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd556e4af3ef34146af042c72679088e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1188882043
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -251,6 +275,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3545802057339950825, guid: 76eb37b29c13d484b8832cf23ec2a2ff,
+        type: 3}
+      propertyPath: objectsToSpawn.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3545802057339950825, guid: 76eb37b29c13d484b8832cf23ec2a2ff,
         type: 3}
@@ -314,6 +343,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76eb37b29c13d484b8832cf23ec2a2ff, type: 3}
+--- !u!114 &1249583943 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3545802057339950825, guid: 76eb37b29c13d484b8832cf23ec2a2ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 1279604038}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd556e4af3ef34146af042c72679088e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1279604038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -330,6 +371,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3545802057339950825, guid: 76eb37b29c13d484b8832cf23ec2a2ff,
+        type: 3}
+      propertyPath: objectsToSpawn.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3545802057339950825, guid: 76eb37b29c13d484b8832cf23ec2a2ff,
         type: 3}
@@ -483,6 +529,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1786437929}
+  - component: {fileID: 1786437930}
   m_Layer: 0
   m_Name: MasterSpawner
   m_TagString: Untagged
@@ -508,6 +555,83 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1786437930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1786437928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d83d951cc1eadb349aa27b8624b6c99c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  difficultyLevels:
+  - objectsToSpawn:
+    - objectToSpawn: {fileID: 8596701873593514276, guid: c16272122bae945419b53698dddd3ae0,
+        type: 3}
+      spawnWeight: 2
+    - objectToSpawn: {fileID: 3663000047243260205, guid: 288b6d26c47916344bcc3d2b1c490a25,
+        type: 3}
+      spawnWeight: 1
+    spawnDelay: 15
+    spawnVariance: 5
+    difficultyDuration: 60
+  - objectsToSpawn:
+    - objectToSpawn: {fileID: 8596701873593514276, guid: c16272122bae945419b53698dddd3ae0,
+        type: 3}
+      spawnWeight: 2
+    - objectToSpawn: {fileID: 3663000047243260205, guid: 288b6d26c47916344bcc3d2b1c490a25,
+        type: 3}
+      spawnWeight: 1
+    spawnDelay: 11
+    spawnVariance: 3
+    difficultyDuration: 40
+  - objectsToSpawn:
+    - objectToSpawn: {fileID: 8596701873593514276, guid: c16272122bae945419b53698dddd3ae0,
+        type: 3}
+      spawnWeight: 5
+    - objectToSpawn: {fileID: 3663000047243260205, guid: 288b6d26c47916344bcc3d2b1c490a25,
+        type: 3}
+      spawnWeight: 3
+    - objectToSpawn: {fileID: 8596701873593514276, guid: c071d6e404f38b3449b700115d49bce1,
+        type: 3}
+      spawnWeight: 2
+    spawnDelay: 11
+    spawnVariance: 3
+    difficultyDuration: 60
+  - objectsToSpawn:
+    - objectToSpawn: {fileID: 8596701873593514276, guid: c071d6e404f38b3449b700115d49bce1,
+        type: 3}
+      spawnWeight: 2
+    - objectToSpawn: {fileID: 8679763138414256152, guid: 1079096f4509a0d448095bee115d4d23,
+        type: 3}
+      spawnWeight: 1
+    spawnDelay: 12
+    spawnVariance: 2
+    difficultyDuration: 80
+  - objectsToSpawn:
+    - objectToSpawn: {fileID: 8596701873593514276, guid: c16272122bae945419b53698dddd3ae0,
+        type: 3}
+      spawnWeight: 10
+    - objectToSpawn: {fileID: 3663000047243260205, guid: 288b6d26c47916344bcc3d2b1c490a25,
+        type: 3}
+      spawnWeight: 5
+    - objectToSpawn: {fileID: 8679763138414256152, guid: 1079096f4509a0d448095bee115d4d23,
+        type: 3}
+      spawnWeight: 3
+    - objectToSpawn: {fileID: 8596701873593514276, guid: c071d6e404f38b3449b700115d49bce1,
+        type: 3}
+      spawnWeight: 2
+    spawnDelay: 9
+    spawnVariance: 3
+    difficultyDuration: 80
+  spawners:
+  - {fileID: 2112038023}
+  - {fileID: 1249583943}
+  - {fileID: 941439639}
+  - {fileID: 817705969}
 --- !u!1001 &2066579381
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -524,6 +648,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3545802057339950825, guid: 76eb37b29c13d484b8832cf23ec2a2ff,
+        type: 3}
+      propertyPath: objectsToSpawn.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3545802057339950825, guid: 76eb37b29c13d484b8832cf23ec2a2ff,
         type: 3}
@@ -587,6 +716,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76eb37b29c13d484b8832cf23ec2a2ff, type: 3}
+--- !u!114 &2112038023 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3545802057339950825, guid: 76eb37b29c13d484b8832cf23ec2a2ff,
+    type: 3}
+  m_PrefabInstance: {fileID: 3545802058038879745}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd556e4af3ef34146af042c72679088e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3545802058038879745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -598,6 +739,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Spawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 3545802057339950825, guid: 76eb37b29c13d484b8832cf23ec2a2ff,
+        type: 3}
+      propertyPath: objectsToSpawn.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3545802057339950825, guid: 76eb37b29c13d484b8832cf23ec2a2ff,
         type: 3}
