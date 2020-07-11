@@ -12,6 +12,10 @@ public class EnemyBehaviourComponent : MonoBehaviour
     private AudioClip DeathSound;
     [SerializeField]
     private int ScoreValue;
+    [SerializeField]
+    private ParticleSystem DamageParticle;
+    [SerializeField]
+    private Sprite DamagedSprite;
 
     [SerializeField] private int Health = 1;
     private void OnTriggerEnter2D(Collider2D collision)
@@ -19,6 +23,11 @@ public class EnemyBehaviourComponent : MonoBehaviour
         if(collision.gameObject.CompareTag(AffectedTag))
         {
             Health--;
+            if(DamageParticle != null && DamagedSprite != null)
+            {
+                DamageParticle.Play();
+                GetComponentInChildren<SpriteRenderer>().sprite = DamagedSprite;
+            }
             if (Health <= 0)
             {
                 Death();
