@@ -18,6 +18,10 @@ public class EnemyBehaviourComponent : MonoBehaviour
 
     private void OnDestroy()
     {
+        if(Camera.main != null)
+        {
+            Camera.main.GetComponent<CameraShake>().Shake(.5f, .2f);
+        }
         Instantiate(DeathParticle, transform.position, Quaternion.identity);
     }
 }

@@ -26,13 +26,15 @@ public class PlayerBehaviour : MonoBehaviour
             if (lives > 1)
             {
                 lives--;
-                UpdateHealth();
             }
             else
             {
+                lives = 0;
+                UpdateHealth();
                 isAlive = false;
                 GameOverParent.SetActive(true);
             }
+            UpdateHealth();
         }
 
     }
