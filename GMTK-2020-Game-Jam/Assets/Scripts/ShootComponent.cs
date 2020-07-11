@@ -15,8 +15,11 @@ public class ShootComponent : MonoBehaviour
     [SerializeField]
     private float shotCooldown = 1;
     [SerializeField]
-    private Transform ProjectileOrigin;
+    private List<Transform> ProjectileOrigins;
+    [SerializeField]
+    private List<ParticleSystem> SmokeParticles;
     private bool canShoot = true;
+    private int lastProjectileOrigin = 0;
 
     private void Awake()
     {
@@ -29,6 +32,7 @@ public class ShootComponent : MonoBehaviour
             canShoot = false;
             parentRigidBody.AddTorque(torque, ForceMode2D.Impulse);
             InstantiateProjectile();
+            PlayParticleSystem();
             StartCoroutine(ShotCooldown());
         }
     }
@@ -41,7 +45,31 @@ public class ShootComponent : MonoBehaviour
 
     private void InstantiateProjectile()
     {
-        GameObject instantiatedProjectile = Instantiate(projectile, ProjectileOrigin.position, transform.rotation);
+        GameObject instantiatedProjectile = Instantiate(projectile, GetNextProjectileOrigin().position, transform.rotation);
         instantiatedProjectile.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * projectileSpeed, ForceMode2D.Impulse);
+    }
+
+    private Transform GetNextProjectileOrigin()
+    {
+        if(ProjectileOrigins.Count == 1)
+        {
+            lastProjectileOrigin = 0;
+            return ProjectileOrigins[0];
+        }
+        else
+        {
+            lastProjectileOrigin += 1;
+            if(lastProjectileOrigin == ProjectileOrigins.Count)
+            {
+                lastProjectileOrigin = 0;
+            }
+        }
+        Transform nextOrigin = ProjectileOrigins[lastProjectileOrigin];
+        return nextOrigin;
+    }
+
+    private void PlayParticleSystem()
+    {
+        SmokeParticles[lastProjectileOrigin].Play();
     }
 }
