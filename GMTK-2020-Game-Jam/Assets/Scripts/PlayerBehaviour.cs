@@ -13,6 +13,11 @@ public class PlayerBehaviour : MonoBehaviour
     private GameObject GameOverParent;
     [HideInInspector]
     public static bool isAlive = true;
+
+    private void Awake()
+    {
+        isAlive = true;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Enemy"))
