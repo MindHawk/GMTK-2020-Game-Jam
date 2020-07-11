@@ -16,6 +16,7 @@ public class SpawnEnemies : MonoBehaviour
     private void Start()
     {
         _timeToNextSpawn = spawnDelay;
+        _timeToNextSpawn += Random.Range(-spawnVariance, spawnVariance);
     }
 
     // Update is called once per frame

@@ -26,7 +26,7 @@ public class StrafingMoveComponent : MonoBehaviour
         Vector3 targetPos = playerTransformPosition;
         SetRotation();
         _rb.velocity = (targetPos - transform.position) / timeToReachPlayer;
-        _timeLeftToStrafe = strafingSwitchDelay;
+        _timeLeftToStrafe = 0;
     }
 
     private void Update()
