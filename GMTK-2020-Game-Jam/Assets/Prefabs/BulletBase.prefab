@@ -161,7 +161,7 @@ TrailRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Time: 0.2
   m_Parameters:
     serializedVersion: 3
@@ -202,11 +202,11 @@ TrailRenderer:
     colorGradient:
       serializedVersion: 2
       key0: {r: 0, g: 0, b: 0, a: 0}
-      key1: {r: 0.75, g: 0.15, b: 0, a: 1}
-      key2: {r: 1.25, g: 0.56, b: 0.12, a: 0}
-      key3: {r: 3.5, g: 2, b: 0.5, a: 0}
-      key4: {r: 4, g: 3.5, b: 1.2, a: 0}
-      key5: {r: 12, g: 10, b: 2.5, a: 0}
+      key1: {r: 0, g: 0.7119928, b: 0.7490196, a: 1}
+      key2: {r: 0, g: 0.14399119, b: 1.6688482, a: 0}
+      key3: {r: 0, g: 0.042341687, b: 2.5127182, a: 0}
+      key4: {r: 1.2146596, g: 2.8786433, b: 3.9999995, a: 0}
+      key5: {r: 9.144026, g: 11.393407, b: 16.020939, a: 0}
       key6: {r: 0, g: 0, b: 0, a: 0}
       key7: {r: 0, g: 0, b: 0, a: 0}
       ctime0: 0
