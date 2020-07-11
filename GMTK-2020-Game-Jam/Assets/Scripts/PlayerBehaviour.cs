@@ -29,7 +29,7 @@ public class PlayerBehaviour : MonoBehaviour
             Destroy(collision.gameObject);
             if(Camera.main != null)
             {
-                Camera.main.GetComponent<CameraShake>().Shake(.5f, .05f);
+                Camera.main.GetComponent<CameraShake>().Shake(.5f, .075f);
             }
             AudioSource.PlayClipAtPoint(ExplosionSound, transform.position);
             Instantiate(ExplosionParticle, transform.position, Quaternion.identity);
