@@ -12,8 +12,6 @@ public class PauseGameBehaviour : MonoBehaviour
     [SerializeField]
     private Toggle toggleLaserPointer;
 
-    [SerializeField] private GameObject laserPointer;
-
     private void OnEnable()
     {
         Time.timeScale = 0f;
@@ -45,7 +43,6 @@ public class PauseGameBehaviour : MonoBehaviour
         PlayerPrefs.SetInt("LaserPointer", laserPointerAsInt);
         bool useLaserPointer = toggleLaserPointer.isOn;
         OptionsContainer.UseLaserPointer = useLaserPointer;
-        laserPointer.SetActive(useLaserPointer);
     }
 
     public void ResumeGame()
