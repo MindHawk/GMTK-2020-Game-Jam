@@ -8,9 +8,13 @@ public class InputHandler : MonoBehaviour
     public UnityEvent LeftClick = new UnityEvent();
     public UnityEvent RigthClick = new UnityEvent();
 
+
     private void Update()
     {
-        HandleInput();
+        if (PlayerBehaviour.isAlive)
+        {
+            HandleInput();
+        }
     }
 
     private void HandleInput()
