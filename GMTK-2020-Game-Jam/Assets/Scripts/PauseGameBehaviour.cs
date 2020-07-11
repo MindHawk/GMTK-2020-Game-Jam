@@ -8,13 +8,18 @@ public class PauseGameBehaviour : MonoBehaviour
     [SerializeField]
     private Slider slider;
     [SerializeField]
-    private Toggle toggle;
+    private Toggle toggleScreenShake;
+    [SerializeField]
+    private Toggle toggleLaserPointer;
+
+    [SerializeField] private GameObject laserPointer;
 
     private void OnEnable()
     {
         Time.timeScale = 0f;
         slider.value = OptionsContainer.Volume;
-        toggle.isOn = OptionsContainer.DoScreenShake;
+        toggleScreenShake.isOn = OptionsContainer.DoScreenShake;
+        toggleLaserPointer.isOn = OptionsContainer.UseLaserPointer;
     }
     
     private void OnDisable()
@@ -29,9 +34,18 @@ public class PauseGameBehaviour : MonoBehaviour
 
     public void UpdateDoScreenShake()
     {
-        int screenShakeAsBool = toggle.isOn ? 1 : 0;
-        PlayerPrefs.SetInt("ScreenShake", screenShakeAsBool);
-        OptionsContainer.DoScreenShake = toggle.isOn;
+        int screenShakeAsInt = toggleScreenShake.isOn ? 1 : 0;
+        PlayerPrefs.SetInt("ScreenShake", screenShakeAsInt);
+        OptionsContainer.DoScreenShake = toggleScreenShake.isOn;
+    }
+    
+    public void UpdateDoLaserPointer()
+    {
+        int laserPointerAsInt = toggleLaserPointer.isOn ? 1 : 0;
+        PlayerPrefs.SetInt("LaserPointer", laserPointerAsInt);
+        bool useLaserPointer = toggleLaserPointer.isOn;
+        OptionsContainer.UseLaserPointer = useLaserPointer;
+        laserPointer.SetActive(useLaserPointer);
     }
 
     public void ResumeGame()

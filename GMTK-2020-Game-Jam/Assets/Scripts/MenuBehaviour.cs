@@ -16,6 +16,11 @@ public class MenuBehaviour : MonoBehaviour
         {
             PlayerPrefs.SetInt("ScreenShake", 1);
         }
+        
+        if (PlayerPrefs.GetInt("LaserPointer", -1) == -1)
+        {
+            PlayerPrefs.SetInt("LaserPointer", 1);
+        }
     }
     
     public void SwitchScenes(string targetScene)
