@@ -1,10 +1,19 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
+
+[Serializable]
+public class SpawnChance
+{
+    public GameObject objectToSpawn;
+    public int spawnWeight;
+}
 
 public class SpawnEnemies : MonoBehaviour
 {
-    public List<GameObject> objectsToSpawn;
+    public List<SpawnChance> objectsToSpawn;
 
     public float spawnDelay = 7;
     public float spawnVariance = 3; // Spawn time can vary by up to this much
@@ -34,8 +43,25 @@ public class SpawnEnemies : MonoBehaviour
 
     private void SpawnEnemy()
     {
+        int totalWeight = 0;
+        foreach (SpawnChance spawnChance in objectsToSpawn)
+        {
+            totalWeight += spawnChance.spawnWeight;
+        }
+        int randomWeight = Random.Range(1, totalWeight + 1);
+        GameObject objectToSpawn = null;
+        foreach (SpawnChance spawnChance in objectsToSpawn)
+        {
+            if (randomWeight <= spawnChance.spawnWeight)
+            {
+                objectToSpawn = spawnChance.objectToSpawn;
+                break;
+            }
+            randomWeight -= spawnChance.spawnWeight;
+        }
         Vector3 transPos = transform.position;
         Vector2 spawnLocation = new Vector2(transPos.x + Random.Range(-xVariance, xVariance), transPos.y + Random.Range(-yVariance, yVariance));
-        Instantiate(objectsToSpawn[Random.Range(0, objectsToSpawn.Count)], spawnLocation, Quaternion.identity);
+        
+        Instantiate(objectToSpawn, spawnLocation, Quaternion.identity);
     }
 }
