@@ -1487,6 +1487,9 @@ MonoBehaviour:
     type: 3}
   DeathSound: {fileID: 8300000, guid: 23608a5e2750e704ea80384e8f4559e6, type: 3}
   ScoreValue: 1
+  DamageParticle: {fileID: 0}
+  DamagedSprite: {fileID: 0}
+  Health: 1
 --- !u!4 &1984649501271906340
 Transform:
   m_ObjectHideFlags: 0
@@ -6423,7 +6426,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3663000047125044822}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.93, y: 6.2, z: 0}
+  m_LocalPosition: {x: 6.55, y: 5.72, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3352495463640064709}
@@ -6922,6 +6925,9 @@ MonoBehaviour:
     type: 3}
   DeathSound: {fileID: 8300000, guid: 6cae95564172f5748aa62a62f7307b99, type: 3}
   ScoreValue: 2
+  DamageParticle: {fileID: 0}
+  DamagedSprite: {fileID: 0}
+  Health: 1
 --- !u!1 &7146412467670286170
 GameObject:
   m_ObjectHideFlags: 0
@@ -11836,8 +11842,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransformPosition: {x: 0, y: 0}
-  timeToReachPlayer: 6
-  strafingForce: 4
+  timeToReachPlayer: 5
+  strafingForce: 0
   strafingSwitchDelay: 2
 --- !u!4 &9075037337640502600
 Transform:
