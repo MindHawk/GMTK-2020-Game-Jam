@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class StrafingMoveComponent : MonoBehaviour
 {
-    public Transform playerTransform;
+    public Vector2 playerTransformPosition = new Vector2(0, 0);
     public float speed;
     [SerializeField] private float strafingForce = 1;
     [SerializeField] private float strafingSwitchDelay = 3;
@@ -23,7 +23,7 @@ public class StrafingMoveComponent : MonoBehaviour
 
     private void Start()
     {
-        Vector3 targetPos = playerTransform.position;
+        Vector3 targetPos = playerTransformPosition;
         SetRotation();
         _rb.velocity = (targetPos - transform.position).normalized * speed;
         _timeLeftToStrafe = strafingSwitchDelay;
@@ -69,7 +69,7 @@ public class StrafingMoveComponent : MonoBehaviour
 
     private void SetRotation()
     {
-        Vector2 direction = (playerTransform.position - transform.position).normalized;
+        Vector2 direction = (playerTransformPosition - (Vector2)transform.position).normalized;
         transform.up = direction;
     }
 }

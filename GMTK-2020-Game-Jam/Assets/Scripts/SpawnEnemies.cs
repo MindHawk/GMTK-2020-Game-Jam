@@ -30,8 +30,6 @@ public class SpawnEnemies : MonoBehaviour
 
     private void SpawnEnemy()
     {
-
-        SimpleMoveComponent enemy = Instantiate(objectsToSpawn[Random.Range(0, objectsToSpawn.Count)], transform.position, Quaternion.identity).GetComponent<SimpleMoveComponent>();
-        enemy.playerTransform = playerTransform;
+        Instantiate(objectsToSpawn[Random.Range(0, objectsToSpawn.Count)], transform.position, Quaternion.identity);
     }
 }
