@@ -20,8 +20,11 @@ public class ShootComponent : MonoBehaviour
     private List<Transform> projectileOrigins;
     [FormerlySerializedAs("SmokeParticles")] [SerializeField]
     private List<ParticleSystem> smokeParticles;
+    [SerializeField]
+    private AudioClip FireSound;
     private bool _canShoot = true;
     private int _lastProjectileOrigin = 0;
+    [Header("Multishot")]
     [SerializeField] private bool multiStageShoot = false;
     [SerializeField] private float multiStageShotsAmount = 3;
     [SerializeField] private float multiStageShotsDelay = 0.12f;
@@ -57,6 +60,7 @@ public class ShootComponent : MonoBehaviour
         _parentRigidBody.AddTorque(torque, ForceMode2D.Impulse);
         InstantiateProjectile();
         PlayParticleSystem();
+        PlaySound();
     }
     
     private IEnumerator DelayedShot(float shotDelay)
@@ -96,5 +100,10 @@ public class ShootComponent : MonoBehaviour
     private void PlayParticleSystem()
     {
         smokeParticles[_lastProjectileOrigin].Play();
+    }
+
+    private void PlaySound()
+    {
+        AudioSource.PlayClipAtPoint(FireSound, transform.position);
     }
 }

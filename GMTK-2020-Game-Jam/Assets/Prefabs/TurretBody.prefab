@@ -1876,6 +1876,7 @@ MonoBehaviour:
   - {fileID: 78856954866839640}
   smokeParticles:
   - {fileID: 6914314118542735604}
+  FireSound: {fileID: 8300000, guid: 6cae95564172f5748aa62a62f7307b99, type: 3}
   multiStageShoot: 0
   multiStageShotsAmount: 3
   multiStageShotsDelay: 0.12
@@ -1993,6 +1994,7 @@ MonoBehaviour:
   - {fileID: 1507023578580401624}
   - {fileID: 5069372040291228385}
   - {fileID: 2845376365018855671}
+  FireSound: {fileID: 8300000, guid: 1b2fb259c2a96c34d9036c2a44219c14, type: 3}
   multiStageShoot: 1
   multiStageShotsAmount: 3
   multiStageShotsDelay: 0.25

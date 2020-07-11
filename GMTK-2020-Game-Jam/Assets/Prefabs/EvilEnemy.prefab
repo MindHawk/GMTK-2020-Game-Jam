@@ -9673,6 +9673,7 @@ MonoBehaviour:
   AffectedTag: PlayerProjectileBlue
   DeathParticle: {fileID: 3166519191012352185, guid: 525e5c6cfbe9bdb47b035d9efe556b7f,
     type: 3}
+  DeathSound: {fileID: 8300000, guid: 23608a5e2750e704ea80384e8f4559e6, type: 3}
 --- !u!50 &8596701873593514277
 Rigidbody2D:
   serializedVersion: 4
