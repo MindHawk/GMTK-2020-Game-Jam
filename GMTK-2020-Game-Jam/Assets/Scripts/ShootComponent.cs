@@ -1,11 +1,13 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class ShootComponent : MonoBehaviour
 {
-    private Rigidbody2D parentRigidBody;
-    [Header("Projectile Atributes")]
+    private Rigidbody2D _parentRigidBody;
+    [Header("Projectile Attributes")]
     [SerializeField]
     private GameObject projectile;
     [SerializeField]
@@ -14,33 +16,60 @@ public class ShootComponent : MonoBehaviour
     private float torque = 3;
     [SerializeField]
     private float shotCooldown = 1;
-    [SerializeField]
-    private List<Transform> ProjectileOrigins;
-    [SerializeField]
-    private List<ParticleSystem> SmokeParticles;
-    private bool canShoot = true;
-    private int lastProjectileOrigin = 0;
+    [FormerlySerializedAs("ProjectileOrigins")] [SerializeField]
+    private List<Transform> projectileOrigins;
+    [FormerlySerializedAs("SmokeParticles")] [SerializeField]
+    private List<ParticleSystem> smokeParticles;
+    private bool _canShoot = true;
+    private int _lastProjectileOrigin = 0;
+    [SerializeField] private bool multiStageShoot = false;
+    [SerializeField] private float multiStageShotsAmount = 3;
+    [SerializeField] private float multiStageShotsDelay = 0.12f;
 
     private void Awake()
     {
-        parentRigidBody = GetComponentInParent<Rigidbody2D>();
+        _parentRigidBody = GetComponentInParent<Rigidbody2D>();
+        _lastProjectileOrigin = (projectileOrigins.Count - 1);
     }
     public void Shoot()
     {
-        if (canShoot)
+        if (_canShoot)
         {
-            canShoot = false;
-            parentRigidBody.AddTorque(torque, ForceMode2D.Impulse);
-            InstantiateProjectile();
-            PlayParticleSystem();
+            _canShoot = false;
             StartCoroutine(ShotCooldown());
+            if (multiStageShoot)
+            {
+                ExecuteShoot();
+                for (int i = 1; i < multiStageShotsAmount; i++)
+                {
+                    StartCoroutine(DelayedShot(i * multiStageShotsDelay));
+                    Debug.Log("Shot " + i);
+                }
+            }
+            else
+            {
+                ExecuteShoot();
+            }
         }
+    }
+
+    private void ExecuteShoot()
+    {
+        _parentRigidBody.AddTorque(torque, ForceMode2D.Impulse);
+        InstantiateProjectile();
+        PlayParticleSystem();
+    }
+    
+    private IEnumerator DelayedShot(float shotDelay)
+    {
+        yield return new WaitForSeconds(shotDelay);
+        ExecuteShoot();
     }
 
     private IEnumerator ShotCooldown()
     {
         yield return new WaitForSeconds(shotCooldown);
-        canShoot = true;
+        _canShoot = true;
     }
 
     private void InstantiateProjectile()
@@ -51,25 +80,22 @@ public class ShootComponent : MonoBehaviour
 
     private Transform GetNextProjectileOrigin()
     {
-        if(ProjectileOrigins.Count == 1)
+        if(projectileOrigins.Count == 1)
         {
-            lastProjectileOrigin = 0;
-            return ProjectileOrigins[0];
+            _lastProjectileOrigin = 0;
+            return projectileOrigins[0];
         }
-        else
+        _lastProjectileOrigin += 1;
+        if(_lastProjectileOrigin == projectileOrigins.Count)
         {
-            lastProjectileOrigin += 1;
-            if(lastProjectileOrigin == ProjectileOrigins.Count)
-            {
-                lastProjectileOrigin = 0;
-            }
+            _lastProjectileOrigin = 0;
         }
-        Transform nextOrigin = ProjectileOrigins[lastProjectileOrigin];
+        Transform nextOrigin = projectileOrigins[_lastProjectileOrigin];
         return nextOrigin;
     }
 
     private void PlayParticleSystem()
     {
-        SmokeParticles[lastProjectileOrigin].Play();
+        smokeParticles[_lastProjectileOrigin].Play();
     }
 }
