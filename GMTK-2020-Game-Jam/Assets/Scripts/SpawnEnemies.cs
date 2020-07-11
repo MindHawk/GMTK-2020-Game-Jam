@@ -4,13 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[Serializable]
-public class SpawnChance
-{
-    public GameObject objectToSpawn;
-    public int spawnWeight;
-}
-
 public class SpawnEnemies : MonoBehaviour
 {
     public List<SpawnChance> objectsToSpawn;
