@@ -4,6 +4,6 @@ using UnityEngine;
 
 public class OptionsContainer : MonoBehaviour
 {
-    public static float Volume = 100;
-    public static bool DoScreenShake = true;
+    public static float Volume = PlayerPrefs.GetFloat("Volume");
+    public static bool DoScreenShake = PlayerPrefs.GetInt("ScreenShake") != 0;
 }

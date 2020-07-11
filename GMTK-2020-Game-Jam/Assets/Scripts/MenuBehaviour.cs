@@ -5,6 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class MenuBehaviour : MonoBehaviour
 {
+    public void Awake()
+    {
+        if (PlayerPrefs.GetFloat("Volume", -1) == -1)
+        {
+            PlayerPrefs.SetFloat("Volume", 100);
+        }
+        
+        if (PlayerPrefs.GetInt("ScreenShake", -1) == -1)
+        {
+            PlayerPrefs.SetInt("ScreenShake", 1);
+        }
+    }
+    
     public void SwitchScenes(string targetScene)
     {
         SceneManager.LoadScene(targetScene);

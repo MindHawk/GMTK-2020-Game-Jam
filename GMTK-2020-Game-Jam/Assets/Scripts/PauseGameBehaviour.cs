@@ -13,6 +13,8 @@ public class PauseGameBehaviour : MonoBehaviour
     private void OnEnable()
     {
         Time.timeScale = 0f;
+        slider.value = OptionsContainer.Volume;
+        toggle.isOn = OptionsContainer.DoScreenShake;
     }
     
     private void OnDisable()
@@ -21,11 +23,14 @@ public class PauseGameBehaviour : MonoBehaviour
     }
     public void UpdateVolumeValue()
     {
+        PlayerPrefs.SetFloat("Volume", slider.value);
         OptionsContainer.Volume = slider.value;
     }
 
     public void UpdateDoScreenShake()
     {
+        int screenShakeAsBool = toggle.isOn ? 1 : 0;
+        PlayerPrefs.SetInt("ScreenShake", screenShakeAsBool);
         OptionsContainer.DoScreenShake = toggle.isOn;
     }
 
