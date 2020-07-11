@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class EnemyBehaviourComponent : MonoBehaviour
 {
+    [SerializeField]
+    private string AffectedTag;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("PlayerProjectile"))
+        if(collision.gameObject.CompareTag(AffectedTag))
         {
             Destroy(this.gameObject);
         }

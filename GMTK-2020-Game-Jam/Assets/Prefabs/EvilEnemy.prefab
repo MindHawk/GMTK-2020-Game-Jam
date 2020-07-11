@@ -4906,6 +4906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4acbe02c85003540a31919ed4685ada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AffectedTag: PlayerProjectileBlue
 --- !u!50 &8596701873593514277
 Rigidbody2D:
   serializedVersion: 4

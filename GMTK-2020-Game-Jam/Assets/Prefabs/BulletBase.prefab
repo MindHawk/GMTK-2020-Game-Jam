@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8232717469813387817}
   m_Layer: 0
   m_Name: BulletBase
-  m_TagString: PlayerProjectile
+  m_TagString: PlayerProjectileBlue
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
