@@ -62,7 +62,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 66487388081272702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.326, y: 0.688, z: 0}
+  m_LocalPosition: {x: 0.32, y: 0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9075037339343170356}
@@ -517,7 +517,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879015852524176288}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.275, y: 0.688, z: 0}
+  m_LocalPosition: {x: 0.021, y: 0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9075037339343170356}
@@ -1085,7 +1085,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3999233813345032424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.03, y: 0.688, z: 0}
+  m_LocalPosition: {x: -0.275, y: 0.65, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 9075037339343170356}
@@ -1420,7 +1420,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDrag: 0
-  m_AngularDrag: 0.2
+  m_AngularDrag: 1
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -1543,12 +1543,15 @@ MonoBehaviour:
   projectile: {fileID: 1681014414738486900, guid: 0850e54798069e440af853d29b61f748,
     type: 3}
   projectileSpeed: 20
-  torque: 1.3
-  shotCooldown: 1
-  ProjectileOrigins:
+  torque: 4.8
+  shotCooldown: 0.75
+  projectileOrigins:
   - {fileID: 78856954866839640}
-  SmokeParticles:
+  smokeParticles:
   - {fileID: 6914314118542735604}
+  multiStageShoot: 0
+  multiStageShotsAmount: 3
+  multiStageShotsDelay: 0.12
 --- !u!1 &9075037339343170359
 GameObject:
   m_ObjectHideFlags: 0
@@ -1653,16 +1656,19 @@ MonoBehaviour:
   projectile: {fileID: 976319766121788616, guid: 9e99a067a02c2494ab9cf059e2104b99,
     type: 3}
   projectileSpeed: 20
-  torque: -0.7
-  shotCooldown: 0.2
-  ProjectileOrigins:
+  torque: -1.3
+  shotCooldown: 0.8
+  projectileOrigins:
   - {fileID: 8484983951848998970}
   - {fileID: 5624345521070753549}
   - {fileID: 7725146646548258952}
-  SmokeParticles:
+  smokeParticles:
   - {fileID: 1507023578580401624}
   - {fileID: 5069372040291228385}
   - {fileID: 2845376365018855671}
+  multiStageShoot: 1
+  multiStageShotsAmount: 3
+  multiStageShotsDelay: 0.25
 --- !u!1001 &699824854967850128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1673,12 +1679,12 @@ PrefabInstance:
     - target: {fileID: 2898665440175134862, guid: d5a084e552bc74d40ab612c484400d93,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.05
+      value: -0.275
       objectReference: {fileID: 0}
     - target: {fileID: 2898665440175134862, guid: d5a084e552bc74d40ab612c484400d93,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.73
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 2898665440175134862, guid: d5a084e552bc74d40ab612c484400d93,
         type: 3}
@@ -1774,7 +1780,7 @@ PrefabInstance:
     - target: {fileID: 2898665440175134862, guid: d5a084e552bc74d40ab612c484400d93,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.73
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 2898665440175134862, guid: d5a084e552bc74d40ab612c484400d93,
         type: 3}
@@ -1966,12 +1972,12 @@ PrefabInstance:
     - target: {fileID: 2898665440175134862, guid: d5a084e552bc74d40ab612c484400d93,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.3
+      value: 0.021
       objectReference: {fileID: 0}
     - target: {fileID: 2898665440175134862, guid: d5a084e552bc74d40ab612c484400d93,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.73
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 2898665440175134862, guid: d5a084e552bc74d40ab612c484400d93,
         type: 3}

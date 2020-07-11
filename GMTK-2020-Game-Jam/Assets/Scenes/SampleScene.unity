@@ -424,35 +424,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 9075037338106188601, guid: 92127a6f20ceeb947aa7126875eed19f,
-        type: 3}
-      propertyPath: m_AngularDrag
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 9075037338106188602, guid: 92127a6f20ceeb947aa7126875eed19f,
         type: 3}
       propertyPath: m_Name
       value: TurretBody
-      objectReference: {fileID: 0}
-    - target: {fileID: 9075037338985095197, guid: 92127a6f20ceeb947aa7126875eed19f,
-        type: 3}
-      propertyPath: torque
-      value: 4.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 9075037338985095197, guid: 92127a6f20ceeb947aa7126875eed19f,
-        type: 3}
-      propertyPath: shotCooldown
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 9075037339343170358, guid: 92127a6f20ceeb947aa7126875eed19f,
-        type: 3}
-      propertyPath: shotCooldown
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 9075037339343170358, guid: 92127a6f20ceeb947aa7126875eed19f,
-        type: 3}
-      propertyPath: torque
-      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92127a6f20ceeb947aa7126875eed19f, type: 3}
