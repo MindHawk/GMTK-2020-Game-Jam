@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -17,6 +18,16 @@ public class PlayerBehaviour : MonoBehaviour
     private ParticleSystem ExplosionParticle;
     [SerializeField]
     private AudioClip ExplosionSound;
+    [HideInInspector]
+    public static int Score = 0;
+    [SerializeField]
+    private TextMeshProUGUI ScoreText;
+
+
+    private void FixedUpdate()
+    {
+        ScoreText.text = "Score: " + Score;
+    }
 
     private void Awake()
     {

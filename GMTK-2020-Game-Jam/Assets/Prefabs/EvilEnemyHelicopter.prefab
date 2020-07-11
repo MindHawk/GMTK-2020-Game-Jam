@@ -67,6 +67,7 @@ MonoBehaviour:
   DeathParticle: {fileID: 3166519191012352185, guid: 525e5c6cfbe9bdb47b035d9efe556b7f,
     type: 3}
   DeathSound: {fileID: 8300000, guid: 6cae95564172f5748aa62a62f7307b99, type: 3}
+  ScoreValue: 2
 --- !u!50 &3663000047243260204
 Rigidbody2D:
   serializedVersion: 4
