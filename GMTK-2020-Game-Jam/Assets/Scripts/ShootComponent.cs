@@ -43,7 +43,6 @@ public class ShootComponent : MonoBehaviour
                 for (int i = 1; i < multiStageShotsAmount; i++)
                 {
                     StartCoroutine(DelayedShot(i * multiStageShotsDelay));
-                    Debug.Log("Shot " + i);
                 }
             }
             else
