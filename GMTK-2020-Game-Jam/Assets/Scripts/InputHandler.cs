@@ -28,7 +28,10 @@ public class InputHandler : MonoBehaviour
         {
             RightClick.Invoke();
         }
-        if (Input.GetAxis("Pause") != 0)
+        // DO NOT USE AXIS FOR THIS BUTTON PRESS
+        // The axis will not change when timescale = 0
+        // Meaning the user repauses every frame they press the resume button
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
             PauseGame.Invoke();
         }
