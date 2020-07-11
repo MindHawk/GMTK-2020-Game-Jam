@@ -12,12 +12,18 @@ public class EnemyBehaviourComponent : MonoBehaviour
     private AudioClip DeathSound;
     [SerializeField]
     private int ScoreValue;
+
+    [SerializeField] private int Health = 1;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag(AffectedTag))
         {
-            Death();
-            Destroy(gameObject);
+            Health--;
+            if (Health <= 0)
+            {
+                Death();
+                Destroy(gameObject);
+            }
         }
     }
 
