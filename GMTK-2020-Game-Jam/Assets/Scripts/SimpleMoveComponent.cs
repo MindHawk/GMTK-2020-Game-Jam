@@ -5,7 +5,7 @@ using UnityEngine;
 public class SimpleMoveComponent : MonoBehaviour
 {
     public Transform playerTransform;
-    public int speed;
+    public float speed;
     private Rigidbody2D _rb;
     
     // Start is called before the first frame update
@@ -23,9 +23,7 @@ public class SimpleMoveComponent : MonoBehaviour
 
     private void SetRotation()
     {
-        Vector3 vectorToTarget = playerTransform.position - transform.position;
-        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg + 90;
-        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, q, 10);
+        Vector2 direction = (playerTransform.position - transform.position).normalized;
+        transform.up = direction;
     }
 }
