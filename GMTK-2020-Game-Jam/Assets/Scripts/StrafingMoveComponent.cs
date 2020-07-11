@@ -6,13 +6,13 @@ using UnityEngine;
 
 public class StrafingMoveComponent : MonoBehaviour
 {
-    public Transform playerTransform;
+    public Vector2 playerTransformPosition = new Vector2(0, 0);
     public float speed;
     [SerializeField] private float strafingForce = 1;
     [SerializeField] private float strafingSwitchDelay = 3;
-    [SerializeField] private float timeLeftToStrafe;
-    [SerializeField] private bool isStrafingLeft = true;
-    [SerializeField] private bool firstStrafe = true;
+    private float _timeLeftToStrafe;
+    private bool _isStrafingLeft = true;
+    private bool _firstStrafe = true;
     private Rigidbody2D _rb;
 
     // Start is called before the first frame update
@@ -23,28 +23,28 @@ public class StrafingMoveComponent : MonoBehaviour
 
     private void Start()
     {
-        Vector3 targetPos = playerTransform.position;
+        Vector3 targetPos = playerTransformPosition;
         SetRotation();
         _rb.velocity = (targetPos - transform.position).normalized * speed;
-        timeLeftToStrafe = strafingSwitchDelay;
+        _timeLeftToStrafe = strafingSwitchDelay;
     }
 
     private void Update()
     {
-        timeLeftToStrafe -= Time.deltaTime;
-        if (timeLeftToStrafe <= 0)
+        _timeLeftToStrafe -= Time.deltaTime;
+        if (_timeLeftToStrafe <= 0)
         {
-            if (firstStrafe)
+            if (_firstStrafe)
             {
                 // We have to do this in update or relative force will use our absolute position, despite us being rotated!
-                firstStrafe = false;
+                _firstStrafe = false;
                 _rb.AddRelativeForce(Vector2.left * (strafingForce / 2), ForceMode2D.Impulse);
-                isStrafingLeft = true;
-                timeLeftToStrafe += (strafingSwitchDelay / 2);
+                _isStrafingLeft = true;
+                _timeLeftToStrafe += (strafingSwitchDelay / 2);
                 return;
             }
-            timeLeftToStrafe += strafingSwitchDelay;
-            if (isStrafingLeft)
+            _timeLeftToStrafe += strafingSwitchDelay;
+            if (_isStrafingLeft)
             {
                 MoveRight();
             }
@@ -53,7 +53,7 @@ public class StrafingMoveComponent : MonoBehaviour
                 MoveLeft();
             }
 
-            isStrafingLeft = !isStrafingLeft;
+            _isStrafingLeft = !_isStrafingLeft;
         }
     }
 
@@ -69,7 +69,7 @@ public class StrafingMoveComponent : MonoBehaviour
 
     private void SetRotation()
     {
-        Vector2 direction = (playerTransform.position - transform.position).normalized;
+        Vector2 direction = (playerTransformPosition - (Vector2)transform.position).normalized;
         transform.up = direction;
     }
 }
