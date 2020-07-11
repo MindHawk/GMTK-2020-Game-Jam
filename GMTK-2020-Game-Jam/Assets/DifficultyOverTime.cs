@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 [Serializable]
@@ -22,6 +23,9 @@ public class DifficultyOverTime : MonoBehaviour
     private List<SpawnEnemies> spawners;
 
     private bool finalDifficulty = false;
+    
+    [SerializeField]
+    private TextMeshProUGUI LevelText;
 
     private void Start()
     {
@@ -41,6 +45,7 @@ public class DifficultyOverTime : MonoBehaviour
             {
                 finalDifficulty = true;
             }
+            LevelText.text = "Level: " + (_activeDifficulty + 1);
         }
     }
 
