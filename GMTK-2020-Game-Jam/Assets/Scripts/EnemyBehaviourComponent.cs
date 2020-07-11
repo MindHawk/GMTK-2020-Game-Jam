@@ -6,7 +6,7 @@ public class EnemyBehaviourComponent : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "PlayerProjectile")
+        if(collision.gameObject.CompareTag("PlayerProjectile"))
         {
             Destroy(this.gameObject);
         }
