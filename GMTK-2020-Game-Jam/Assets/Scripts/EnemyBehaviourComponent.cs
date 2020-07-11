@@ -15,7 +15,7 @@ public class EnemyBehaviourComponent : MonoBehaviour
         if(collision.gameObject.CompareTag(AffectedTag))
         {
             Death();
-            Destroy(this.gameObject);
+            Destroy(gameObject);
         }
     }
 

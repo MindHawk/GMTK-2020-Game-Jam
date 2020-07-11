@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 7939482590383748418}
   - component: {fileID: 2351752036465976382}
   - component: {fileID: 8232717469813387817}
+  - component: {fileID: -4534949042105909989}
+  - component: {fileID: 3069175666700490643}
   m_Layer: 0
   m_Name: BulletBase
   m_TagString: PlayerProjectileBlue
@@ -237,3 +239,29 @@ TrailRenderer:
   m_MinVertexDistance: 0.1
   m_Autodestruct: 1
   m_Emitting: 1
+--- !u!114 &-4534949042105909989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681014414738486900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624ff7ffb76ccfe4c8b082fc5be5d507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToLive: 10
+--- !u!114 &3069175666700490643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681014414738486900}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 624ff7ffb76ccfe4c8b082fc5be5d507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TimeToLive: 5
