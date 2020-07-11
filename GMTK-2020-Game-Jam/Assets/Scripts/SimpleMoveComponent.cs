@@ -1,11 +1,11 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SimpleMoveComponent : MonoBehaviour
 {
     public Vector2 playerTransformPosition = new Vector2(0, 0);
-    public float speed;
+    public float timeToReachPlayer = 6;
     private Rigidbody2D _rb;
     
     // Start is called before the first frame update
@@ -18,7 +18,7 @@ public class SimpleMoveComponent : MonoBehaviour
     {
         Vector3 targetPos = playerTransformPosition;
         SetRotation();
-        _rb.velocity = (targetPos - transform.position).normalized * speed; 
+        _rb.velocity = (targetPos - transform.position) / timeToReachPlayer; 
     }
 
     private void SetRotation()

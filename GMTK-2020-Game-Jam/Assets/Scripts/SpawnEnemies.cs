@@ -8,6 +8,8 @@ public class SpawnEnemies : MonoBehaviour
 
     public float spawnDelay = 7;
     public float spawnVariance = 3; // Spawn time can vary by up to this much
+    public float xVariance;
+    public float yVariance;
 
     private float _timeToNextSpawn;
     // Start is called before the first frame update
@@ -31,6 +33,8 @@ public class SpawnEnemies : MonoBehaviour
 
     private void SpawnEnemy()
     {
-        Instantiate(objectsToSpawn[Random.Range(0, objectsToSpawn.Count)], transform.position, Quaternion.identity);
+        Vector3 transPos = transform.position;
+        Vector2 spawnLocation = new Vector2(transPos.x + Random.Range(-xVariance, xVariance), transPos.y + Random.Range(-yVariance, yVariance));
+        Instantiate(objectsToSpawn[Random.Range(0, objectsToSpawn.Count)], spawnLocation, Quaternion.identity);
     }
 }
