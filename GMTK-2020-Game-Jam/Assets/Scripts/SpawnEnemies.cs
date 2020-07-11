@@ -4,21 +4,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-[Serializable]
-public class SpawnChance
-{
-    public GameObject objectToSpawn;
-    public int spawnWeight;
-}
-
 public class SpawnEnemies : MonoBehaviour
 {
     public List<SpawnChance> objectsToSpawn;
 
     public float spawnDelay = 7;
     public float spawnVariance = 3; // Spawn time can vary by up to this much
-    public float xVariance;
-    public float yVariance;
+    [HideInInspector] public float xVariance;
+    [HideInInspector] public float yVariance;
 
     private float _timeToNextSpawn;
     // Start is called before the first frame update
