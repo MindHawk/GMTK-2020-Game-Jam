@@ -35,6 +35,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void Awake()
     {
         isAlive = true;
+        Score = 0; // Reset score or this carries over between scenes
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
