@@ -11,9 +11,5 @@ public class DisableLaserPointer : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-        else
-        {
-            gameObject.SetActive(true);
-        }
     }
 }
