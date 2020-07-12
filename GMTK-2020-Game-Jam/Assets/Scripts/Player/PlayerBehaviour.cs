@@ -56,9 +56,9 @@ public class PlayerBehaviour : MonoBehaviour
             {
                 lives = 0;
                 UpdateHealth();
+                UpdateHighScore();
                 isAlive = false;
                 GameOverParent.SetActive(true);
-
             }
             UpdateHealth();
         }
