@@ -58,6 +58,7 @@ public class PlayerBehaviour : MonoBehaviour
                 UpdateHealth();
                 isAlive = false;
                 GameOverParent.SetActive(true);
+
             }
             UpdateHealth();
         }
@@ -73,6 +74,14 @@ public class PlayerBehaviour : MonoBehaviour
         for (int i = 0; i < lives; i++)
         {
             HealthIcons[i].enabled = true;
+        }
+    }
+
+    private void UpdateHighScore()
+    {
+        if(Score > PlayerPrefs.GetInt("HighScore"))
+        {
+            PlayerPrefs.SetInt("HighScore", Score);
         }
     }
 }

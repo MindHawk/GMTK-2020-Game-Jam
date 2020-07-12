@@ -100,9 +100,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectile: {fileID: 1067076955749575624, guid: 87396bec4bd568f4ea7d175c15406ae4,
     type: 3}
-  projectileSpeed: 32
+  projectileSpeed: 40
   torque: 5.4
-  shotCooldown: 0.75
+  shotCooldown: 0.82
   projectileOrigins:
   - {fileID: 6003936036479366386}
   smokeParticles:
