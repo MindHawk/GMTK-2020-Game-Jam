@@ -134,7 +134,7 @@ MonoBehaviour:
   projectile: {fileID: 1681014414738486900, guid: 0850e54798069e440af853d29b61f748,
     type: 3}
   projectileSpeed: 12
-  torque: 1.2
+  torque: 3.4
   shotCooldown: 2.5
   projectileOrigins:
   - {fileID: 6003936036479366386}
