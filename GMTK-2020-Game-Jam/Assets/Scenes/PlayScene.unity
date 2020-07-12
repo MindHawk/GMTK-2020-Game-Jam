@@ -484,7 +484,7 @@ PrefabInstance:
     - target: {fileID: 9075037338106188599, guid: 92127a6f20ceeb947aa7126875eed19f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9075037338106188599, guid: 92127a6f20ceeb947aa7126875eed19f,
         type: 3}
@@ -553,7 +553,7 @@ Transform:
   - {fileID: 791979959}
   - {fileID: 256728174}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1786437930
 MonoBehaviour:
@@ -578,6 +578,7 @@ MonoBehaviour:
     spawnDelay: 15
     spawnVariance: 5
     difficultyDuration: 60
+    levelBoss: {fileID: 0}
   - objectsToSpawn:
     - objectToSpawn: {fileID: 8596701873593514276, guid: c16272122bae945419b53698dddd3ae0,
         type: 3}
@@ -588,6 +589,7 @@ MonoBehaviour:
     spawnDelay: 11
     spawnVariance: 3
     difficultyDuration: 40
+    levelBoss: {fileID: 0}
   - objectsToSpawn:
     - objectToSpawn: {fileID: 8596701873593514276, guid: c16272122bae945419b53698dddd3ae0,
         type: 3}
@@ -601,6 +603,16 @@ MonoBehaviour:
     spawnDelay: 11
     spawnVariance: 3
     difficultyDuration: 60
+    levelBoss: {fileID: 0}
+  - objectsToSpawn:
+    - objectToSpawn: {fileID: 3663000047243260205, guid: 288b6d26c47916344bcc3d2b1c490a25,
+        type: 3}
+      spawnWeight: 1
+    spawnDelay: 15
+    spawnVariance: 3
+    difficultyDuration: 60
+    levelBoss: {fileID: 8596701873593514276, guid: 2f7eba4f84dc3da489a2098b5cf9e27e,
+      type: 3}
   - objectsToSpawn:
     - objectToSpawn: {fileID: 8596701873593514276, guid: c071d6e404f38b3449b700115d49bce1,
         type: 3}
@@ -611,6 +623,7 @@ MonoBehaviour:
     spawnDelay: 12
     spawnVariance: 2
     difficultyDuration: 80
+    levelBoss: {fileID: 0}
   - objectsToSpawn:
     - objectToSpawn: {fileID: 8596701873593514276, guid: c16272122bae945419b53698dddd3ae0,
         type: 3}
@@ -627,6 +640,7 @@ MonoBehaviour:
     spawnDelay: 9
     spawnVariance: 3
     difficultyDuration: 80
+    levelBoss: {fileID: 0}
   spawners:
   - {fileID: 2112038023}
   - {fileID: 1249583943}
