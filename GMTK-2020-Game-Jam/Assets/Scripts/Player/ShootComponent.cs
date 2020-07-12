@@ -77,7 +77,8 @@ public class ShootComponent : MonoBehaviour
 
     private void InstantiateProjectile()
     {
-        GameObject instantiatedProjectile = Instantiate(projectile, GetNextProjectileOrigin().position, transform.rotation);
+        Transform nextOrigin = GetNextProjectileOrigin();
+        GameObject instantiatedProjectile = Instantiate(projectile, nextOrigin.position, nextOrigin.rotation);
         instantiatedProjectile.GetComponent<Rigidbody2D>().AddRelativeForce(Vector2.up * projectileSpeed, ForceMode2D.Impulse);
     }
 
