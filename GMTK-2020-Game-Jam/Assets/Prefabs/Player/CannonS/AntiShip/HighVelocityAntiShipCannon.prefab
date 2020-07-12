@@ -108,9 +108,9 @@ MonoBehaviour:
   smokeParticles:
   - {fileID: 990501608286190686}
   FireSound: {fileID: 8300000, guid: 6cae95564172f5748aa62a62f7307b99, type: 3}
-  multiStageShoot: 0
-  multiStageShotsAmount: 3
-  multiStageShotsDelay: 0.12
+  multiStageShoot: 1
+  multiStageShotsAmount: 2
+  multiStageShotsDelay: 0
 --- !u!1 &7214613261850085225
 GameObject:
   m_ObjectHideFlags: 0
