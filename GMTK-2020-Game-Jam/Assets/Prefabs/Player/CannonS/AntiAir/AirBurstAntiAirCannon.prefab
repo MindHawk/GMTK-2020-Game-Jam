@@ -100,7 +100,7 @@ MonoBehaviour:
   projectile: {fileID: 7497968967422634563, guid: 6606486470a540a49888e92a08de3f99,
     type: 3}
   projectileSpeed: 7
-  torque: -3
+  torque: -2.4
   shotCooldown: 0.4
   projectileOrigins:
   - {fileID: 3863667315348394050}
@@ -112,6 +112,7 @@ MonoBehaviour:
   multiStageShoot: 0
   multiStageShotsAmount: 3
   multiStageShotsDelay: 0.25
+  projectilesPerShot: 1
 --- !u!1 &8637366389236039824
 GameObject:
   m_ObjectHideFlags: 0

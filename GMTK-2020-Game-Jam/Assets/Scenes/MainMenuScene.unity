@@ -3905,7 +3905,7 @@ MonoBehaviour:
 
     REVERSE recoil
 
-    High fire rate
+    Medium fire rate
 
     Fires BEHIND'
 --- !u!222 &1141201255
@@ -5555,8 +5555,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -105}
-  m_SizeDelta: {x: 160, y: 50}
+  m_AnchoredPosition: {x: 0, y: -115}
+  m_SizeDelta: {x: 160, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1872927998
 MonoBehaviour:
@@ -5592,9 +5592,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Explodes in air
 
-    Low recoil
+    Medium recoil
 
-    Medium fire rate
+    High fire rate
 
     Low range'
 --- !u!222 &1872927999
@@ -5847,7 +5847,7 @@ MonoBehaviour:
 
     Medium recoil
 
-    High fire rate'
+    Medium fire rate'
 --- !u!222 &1951004676
 CanvasRenderer:
   m_ObjectHideFlags: 0
