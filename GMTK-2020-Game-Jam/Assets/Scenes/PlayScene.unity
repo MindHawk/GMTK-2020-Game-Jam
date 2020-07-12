@@ -757,7 +757,7 @@ MonoBehaviour:
       spawnWeight: 2
     spawnDelay: 17
     spawnVariance: 7
-    difficultyDuration: 90
+    difficultyDuration: 70
     levelBoss: {fileID: 0}
   - objectsToSpawn:
     - objectToSpawn: {fileID: 3663000047243260205, guid: 288b6d26c47916344bcc3d2b1c490a25,
@@ -828,8 +828,9 @@ MonoBehaviour:
       spawnWeight: 2
     spawnDelay: 6
     spawnVariance: 3
-    difficultyDuration: 80
-    levelBoss: {fileID: 0}
+    difficultyDuration: 100
+    levelBoss: {fileID: 8596701873593514276, guid: 2f7eba4f84dc3da489a2098b5cf9e27e,
+      type: 3}
   spawners:
   - {fileID: 2112038023}
   - {fileID: 1249583943}
