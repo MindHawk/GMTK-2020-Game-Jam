@@ -226,8 +226,8 @@ MonoBehaviour:
   projectile: {fileID: 976319766121788616, guid: 9e99a067a02c2494ab9cf059e2104b99,
     type: 3}
   projectileSpeed: 20
-  torque: 0.5
-  shotCooldown: 0.6
+  torque: 0.85
+  shotCooldown: 0.8
   projectileOrigins:
   - {fileID: 6418543527572898151}
   - {fileID: 7124194152119488080}
@@ -241,7 +241,7 @@ MonoBehaviour:
   FireSound: {fileID: 8300000, guid: 1b2fb259c2a96c34d9036c2a44219c14, type: 3}
   multiStageShoot: 1
   multiStageShotsAmount: 4
-  multiStageShotsDelay: 0.1
+  multiStageShotsDelay: 0.075
 --- !u!1001 &1653671080751831266
 PrefabInstance:
   m_ObjectHideFlags: 0

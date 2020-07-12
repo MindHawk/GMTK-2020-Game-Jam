@@ -26,8 +26,9 @@ public class ShootComponent : MonoBehaviour
     private int _lastProjectileOrigin = 0;
     [Header("Multishot")]
     [SerializeField] private bool multiStageShoot = false;
-    [SerializeField] private float multiStageShotsAmount = 3;
+    [SerializeField] private int multiStageShotsAmount = 3;
     [SerializeField] private float multiStageShotsDelay = 0.12f;
+    [SerializeField] private int projectilesPerShot = 1; 
 
     private void Awake()
     {
@@ -57,10 +58,13 @@ public class ShootComponent : MonoBehaviour
 
     private void ExecuteShoot()
     {
-        _parentRigidBody.AddTorque(torque, ForceMode2D.Impulse);
-        InstantiateProjectile();
-        PlayParticleSystem();
-        PlaySound();
+        for (int i = 0; i < projectilesPerShot; i++)
+        {
+            _parentRigidBody.AddTorque(torque, ForceMode2D.Impulse);
+            InstantiateProjectile();
+            PlayParticleSystem();
+            PlaySound();
+        }
     }
     
     private IEnumerator DelayedShot(float shotDelay)

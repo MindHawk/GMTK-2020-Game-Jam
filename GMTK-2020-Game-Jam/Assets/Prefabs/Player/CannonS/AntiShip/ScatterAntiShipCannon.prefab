@@ -146,8 +146,9 @@ MonoBehaviour:
   - {fileID: 2343539870334354660}
   FireSound: {fileID: 8300000, guid: 6cae95564172f5748aa62a62f7307b99, type: 3}
   multiStageShoot: 1
-  multiStageShotsAmount: 6
-  multiStageShotsDelay: 0.2
+  multiStageShotsAmount: 2
+  multiStageShotsDelay: 0.05
+  projectilesPerShot: 3
 --- !u!1 &7214613261850085225
 GameObject:
   m_ObjectHideFlags: 0
