@@ -27,6 +27,9 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField]
     private GameObject BrokeRecord;
 
+    private float _immuneTimeRemaining;
+    public float ImmuneTime;
+
 
     private void FixedUpdate()
     {
@@ -41,11 +44,20 @@ public class PlayerBehaviour : MonoBehaviour
         isAlive = true;
         Score = 0; // Reset score or this carries over between scenes
     }
+
+    private void Update()
+    {
+        _immuneTimeRemaining -= Time.deltaTime;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);
+            if (_immuneTimeRemaining >= 0)
+            {
+                return;
+            }
             if(Camera.main != null && OptionsContainer.DoScreenShake)
             {
                 Camera.main.GetComponent<CameraShake>().Shake(.5f, .075f);
@@ -54,6 +66,7 @@ public class PlayerBehaviour : MonoBehaviour
             Instantiate(ExplosionParticle, transform.position, Quaternion.identity);
             if (lives > 1)
             {
+                _immuneTimeRemaining = ImmuneTime;
                 lives--;
             }
             else
