@@ -22,6 +22,10 @@ public class PlayerBehaviour : MonoBehaviour
     public static int Score = 0;
     [SerializeField]
     private TextMeshProUGUI ScoreText;
+    [SerializeField]
+    private TextMeshProUGUI HighScoreText;
+    [SerializeField]
+    private GameObject BrokeRecord;
 
 
     private void FixedUpdate()
@@ -79,8 +83,11 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void UpdateHighScore()
     {
-        if(Score > PlayerPrefs.GetInt("HighScore"))
+        int previousRecord = PlayerPrefs.GetInt("HighScore");
+        HighScoreText.text = "" + previousRecord;
+        if(Score > previousRecord)
         {
+            BrokeRecord.SetActive(true);
             PlayerPrefs.SetInt("HighScore", Score);
         }
     }
