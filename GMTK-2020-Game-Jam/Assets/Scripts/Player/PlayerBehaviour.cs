@@ -30,6 +30,10 @@ public class PlayerBehaviour : MonoBehaviour
     private float _immuneTimeRemaining;
     public float ImmuneTime;
 
+    private SpriteRenderer sprite;
+    [SerializeField]
+    private Color DamageColor;
+
 
     private void FixedUpdate()
     {
@@ -43,6 +47,7 @@ public class PlayerBehaviour : MonoBehaviour
     {
         isAlive = true;
         Score = 0; // Reset score or this carries over between scenes
+        sprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     private void Update()
@@ -66,6 +71,7 @@ public class PlayerBehaviour : MonoBehaviour
             Instantiate(ExplosionParticle, transform.position, Quaternion.identity);
             if (lives > 1)
             {
+                StartCoroutine(IndicateDamage(ImmuneTime));
                 _immuneTimeRemaining = ImmuneTime;
                 lives--;
             }
@@ -103,5 +109,23 @@ public class PlayerBehaviour : MonoBehaviour
             BrokeRecord.SetActive(true);
             PlayerPrefs.SetInt("HighScore", Score);
         }
+    }
+
+    IEnumerator IndicateDamage(float duration)
+    {
+        
+        Color initialColor = sprite.color;
+        sprite.color = DamageColor;
+
+        float elapsedTime = 0.0f;
+
+        while (elapsedTime < duration)
+        {
+            sprite.color = Color.Lerp(DamageColor, initialColor, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+
     }
 }

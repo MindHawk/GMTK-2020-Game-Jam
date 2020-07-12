@@ -2943,6 +2943,8 @@ MonoBehaviour:
   ScoreText: {fileID: 8402912333995782390}
   HighScoreText: {fileID: 1243523120990800857}
   BrokeRecord: {fileID: 8166081435141450803}
+  ImmuneTime: 3
+  DamageColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!50 &9075037338106188601
 Rigidbody2D:
   serializedVersion: 4
