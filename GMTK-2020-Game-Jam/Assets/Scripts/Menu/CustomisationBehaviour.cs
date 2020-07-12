@@ -66,4 +66,16 @@ public class CustomisationBehaviour : MonoBehaviour
     {
         PlayerPrefs.SetInt("AirCannon", value);
     }
+
+    public void JamUnlockAllToggle()
+    {
+        if(PlayerPrefs.GetInt("UnlockAll") == 0)
+        {
+            PlayerPrefs.SetInt("UnlockAll", 1);
+        }
+        else
+        {
+            PlayerPrefs.SetInt("UnlockAll", 0);
+        }
+    }
 }

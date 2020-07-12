@@ -13,18 +13,34 @@ public class LockUntilHighScore : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        _highScore = PlayerPrefs.GetInt("HighScore");
-        if (_highScore < highScoreRequirement)
-        {
-            GetComponent<Button>().interactable = false;
-            lockedText.enabled = true;
-            lockedImage.color = new Color(255, 255, 255, 0.5f); // transparency
-        }
+        CheckIfUnlocked();
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void Reload()
+    {
+        CheckIfUnlocked();
+    }
+
+    private void CheckIfUnlocked()
+    {
+        _highScore = PlayerPrefs.GetInt("HighScore");
+        if (_highScore < highScoreRequirement && PlayerPrefs.GetInt("UnlockAll") == 0)
+        {
+            GetComponent<Button>().interactable = false;
+            lockedText.enabled = true;
+            lockedImage.color = new Color(255, 255, 255, 0.5f); // transparency
+        }
+        else
+        {
+            GetComponent<Button>().interactable = true;
+            lockedText.enabled = false;
+            lockedImage.color = new Color(255, 255, 255, 1f);
+        }
     }
 }
