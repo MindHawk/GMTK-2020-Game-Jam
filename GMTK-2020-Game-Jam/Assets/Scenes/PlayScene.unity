@@ -496,6 +496,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2554103686201999069, guid: 92127a6f20ceeb947aa7126875eed19f,
+        type: 3}
+      propertyPath: ImmuneTime
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 4603598954561229160, guid: 92127a6f20ceeb947aa7126875eed19f,
         type: 3}
       propertyPath: m_fontColor.r
