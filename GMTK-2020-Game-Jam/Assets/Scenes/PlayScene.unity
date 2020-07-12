@@ -730,8 +730,8 @@ MonoBehaviour:
     - objectToSpawn: {fileID: 3663000047243260205, guid: 288b6d26c47916344bcc3d2b1c490a25,
         type: 3}
       spawnWeight: 1
-    spawnDelay: 15
-    spawnVariance: 5
+    spawnDelay: 18
+    spawnVariance: 8
     difficultyDuration: 60
     levelBoss: {fileID: 0}
   - objectsToSpawn:
@@ -741,9 +741,9 @@ MonoBehaviour:
     - objectToSpawn: {fileID: 3663000047243260205, guid: 288b6d26c47916344bcc3d2b1c490a25,
         type: 3}
       spawnWeight: 1
-    spawnDelay: 11
-    spawnVariance: 3
-    difficultyDuration: 40
+    spawnDelay: 16
+    spawnVariance: 6
+    difficultyDuration: 70
     levelBoss: {fileID: 0}
   - objectsToSpawn:
     - objectToSpawn: {fileID: 8596701873593514276, guid: c16272122bae945419b53698dddd3ae0,
@@ -755,17 +755,17 @@ MonoBehaviour:
     - objectToSpawn: {fileID: 8596701873593514276, guid: c071d6e404f38b3449b700115d49bce1,
         type: 3}
       spawnWeight: 2
-    spawnDelay: 11
-    spawnVariance: 3
-    difficultyDuration: 60
+    spawnDelay: 17
+    spawnVariance: 7
+    difficultyDuration: 90
     levelBoss: {fileID: 0}
   - objectsToSpawn:
     - objectToSpawn: {fileID: 3663000047243260205, guid: 288b6d26c47916344bcc3d2b1c490a25,
         type: 3}
       spawnWeight: 1
-    spawnDelay: 15
+    spawnDelay: 18
     spawnVariance: 3
-    difficultyDuration: 60
+    difficultyDuration: 70
     levelBoss: {fileID: 8596701873593514276, guid: 2f7eba4f84dc3da489a2098b5cf9e27e,
       type: 3}
   - objectsToSpawn:
@@ -775,8 +775,25 @@ MonoBehaviour:
     - objectToSpawn: {fileID: 8679763138414256152, guid: 1079096f4509a0d448095bee115d4d23,
         type: 3}
       spawnWeight: 1
-    spawnDelay: 12
-    spawnVariance: 2
+    spawnDelay: 14
+    spawnVariance: 4
+    difficultyDuration: 80
+    levelBoss: {fileID: 0}
+  - objectsToSpawn:
+    - objectToSpawn: {fileID: 8596701873593514276, guid: c16272122bae945419b53698dddd3ae0,
+        type: 3}
+      spawnWeight: 10
+    - objectToSpawn: {fileID: 3663000047243260205, guid: 288b6d26c47916344bcc3d2b1c490a25,
+        type: 3}
+      spawnWeight: 5
+    - objectToSpawn: {fileID: 8679763138414256152, guid: 1079096f4509a0d448095bee115d4d23,
+        type: 3}
+      spawnWeight: 2
+    - objectToSpawn: {fileID: 8596701873593514276, guid: c071d6e404f38b3449b700115d49bce1,
+        type: 3}
+      spawnWeight: 1
+    spawnDelay: 13
+    spawnVariance: 3
     difficultyDuration: 80
     levelBoss: {fileID: 0}
   - objectsToSpawn:
@@ -793,6 +810,23 @@ MonoBehaviour:
         type: 3}
       spawnWeight: 2
     spawnDelay: 9
+    spawnVariance: 3
+    difficultyDuration: 80
+    levelBoss: {fileID: 0}
+  - objectsToSpawn:
+    - objectToSpawn: {fileID: 8596701873593514276, guid: c16272122bae945419b53698dddd3ae0,
+        type: 3}
+      spawnWeight: 10
+    - objectToSpawn: {fileID: 3663000047243260205, guid: 288b6d26c47916344bcc3d2b1c490a25,
+        type: 3}
+      spawnWeight: 5
+    - objectToSpawn: {fileID: 8679763138414256152, guid: 1079096f4509a0d448095bee115d4d23,
+        type: 3}
+      spawnWeight: 3
+    - objectToSpawn: {fileID: 8596701873593514276, guid: c071d6e404f38b3449b700115d49bce1,
+        type: 3}
+      spawnWeight: 2
+    spawnDelay: 6
     spawnVariance: 3
     difficultyDuration: 80
     levelBoss: {fileID: 0}
