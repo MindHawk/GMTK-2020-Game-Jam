@@ -14438,7 +14438,7 @@ MonoBehaviour:
   DeathParticle: {fileID: 3166519191012352185, guid: 525e5c6cfbe9bdb47b035d9efe556b7f,
     type: 3}
   DeathSound: {fileID: 8300000, guid: 23608a5e2750e704ea80384e8f4559e6, type: 3}
-  ScoreValue: 1000
+  ScoreValue: 3000
   DamageParticle: {fileID: 0}
   DamagedSprite: {fileID: 0}
   DamageColor: {r: 1, g: 0, b: 0, a: 1}
