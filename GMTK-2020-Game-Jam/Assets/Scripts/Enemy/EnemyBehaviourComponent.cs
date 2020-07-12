@@ -18,6 +18,7 @@ public class EnemyBehaviourComponent : MonoBehaviour
     private Sprite DamagedSprite;
     [SerializeField]
     private Color DamageColor;
+    private bool isDamaged = false;
 
     private SpriteRenderer sprite;
 
@@ -32,7 +33,10 @@ public class EnemyBehaviourComponent : MonoBehaviour
         if(collision.gameObject.CompareTag(AffectedTag))
         {
             Health--;
-            StartCoroutine(IndicateDamage(.5f));
+            if (!isDamaged)
+            {
+                StartCoroutine(IndicateDamage(.5f));
+            }
             if(DamageParticle != null && DamagedSprite != null)
             {
                 DamageParticle.Play();
@@ -48,6 +52,7 @@ public class EnemyBehaviourComponent : MonoBehaviour
 
     IEnumerator IndicateDamage(float duration)
     {
+        isDamaged = true;
         Color initialColor = sprite.color;
         sprite.color = DamageColor;
 
@@ -59,6 +64,8 @@ public class EnemyBehaviourComponent : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+
+        isDamaged = false;
 
     }
 
