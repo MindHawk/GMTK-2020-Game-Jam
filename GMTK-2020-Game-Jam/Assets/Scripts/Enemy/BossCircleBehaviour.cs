@@ -18,7 +18,7 @@ public class BossCircleBehaviour : MonoBehaviour
         float cameraHeight = Camera.main.orthographicSize;
         float cameraWidth = cameraHeight * screenAspect;
         
-        float playAreaY = cameraHeight * 0.8f; // We offset by an additional 20% so the boss is in bounds
+        float playAreaY = cameraHeight * 0.7f; // We offset by an additional 20% so the boss is in bounds
         float playAreaX = cameraWidth * 0.8f;
         waypoints = new List<Vector2>
         {
@@ -41,7 +41,7 @@ public class BossCircleBehaviour : MonoBehaviour
         if (timeLeftToReach <= 0)
         {
             currentWaypoint++;
-            if (currentWaypoint > waypoints.Count)
+            if (currentWaypoint >= waypoints.Count)
             {
                 currentWaypoint = 0;
             }
