@@ -3866,6 +3866,9 @@ MonoBehaviour:
     - m_Text: High Velocity Cannon
       m_Image: {fileID: -4187411339797056044, guid: aae96536c6d267c4aa0bc5e75b9efd1c,
         type: 3}
+    - m_Text: Scatter Cannon
+      m_Image: {fileID: -4654797805034428764, guid: aae96536c6d267c4aa0bc5e75b9efd1c,
+        type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -4249,6 +4252,9 @@ MonoBehaviour:
         type: 3}
     - m_Text: Air Burst Cannon
       m_Image: {fileID: -1372298992902232168, guid: aae96536c6d267c4aa0bc5e75b9efd1c,
+        type: 3}
+    - m_Text: Reverse Cannon
+      m_Image: {fileID: -2402460771033038879, guid: aae96536c6d267c4aa0bc5e75b9efd1c,
         type: 3}
   m_OnValueChanged:
     m_PersistentCalls:
