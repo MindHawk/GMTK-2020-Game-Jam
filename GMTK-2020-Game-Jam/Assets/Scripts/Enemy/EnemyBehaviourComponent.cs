@@ -69,7 +69,7 @@ public class EnemyBehaviourComponent : MonoBehaviour
             Camera.main.GetComponent<CameraShake>().Shake(.25f, .02f);
         }
         AudioSource.PlayClipAtPoint(DeathSound, transform.position, OptionsContainer.Volume);
-        Instantiate(DeathParticle, transform.position, Quaternion.identity);
+        Instantiate(DeathParticle, transform.position, transform.rotation);
         PlayerBehaviour.Score += ScoreValue;
     }
 }
