@@ -26,11 +26,25 @@ public class CannonManagerComponent : MonoBehaviour
 
     private void LoadShipCannon()
     {
+        if (ShipCannonParent.transform.childCount > 0)
+        {
+            for (int i = 0; i < ShipCannonParent.transform.childCount; i++)
+            {
+                Destroy(ShipCannonParent.transform.GetChild(i).gameObject);
+            }
+        }
         Instantiate(ShipCannons[PlayerPrefs.GetInt("ShipCannon")], ShipCannonParent.transform);
     }
 
     private void LoadAirCannon()
     {
+        if (AirCannonParent.transform.childCount > 0)
+        {
+            for (int i = 0; i < AirCannonParent.transform.childCount; i++)
+            {
+                Destroy(AirCannonParent.transform.GetChild(i).gameObject);
+            }
+        }
         Instantiate(AirCannons[PlayerPrefs.GetInt("AirCannon")], AirCannonParent.transform);
 
     }
