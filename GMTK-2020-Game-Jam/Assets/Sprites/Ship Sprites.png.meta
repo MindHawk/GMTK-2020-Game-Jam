@@ -291,12 +291,12 @@ TextureImporter:
       name: Ship Sprites_7
       rect:
         serializedVersion: 2
-        x: 78
-        y: 75
-        width: 200
-        height: 250
+        x: 113
+        y: 76
+        width: 134
+        height: 191
       alignment: 9
-      pivot: {x: 0.5, y: 0.16}
+      pivot: {x: 0.5, y: 0.4}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -312,10 +312,10 @@ TextureImporter:
       name: Ship Sprites_8
       rect:
         serializedVersion: 2
-        x: 749
-        y: 150
-        width: 116
-        height: 92
+        x: 728
+        y: 115
+        width: 167
+        height: 114
       alignment: 9
       pivot: {x: 0.5, y: 0.7}
       border: {x: 0, y: 0, z: 0, w: 0}
