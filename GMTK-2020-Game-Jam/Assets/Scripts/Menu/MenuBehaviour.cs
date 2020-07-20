@@ -19,7 +19,7 @@ public class MenuBehaviour : MonoBehaviour
         
         if (PlayerPrefs.GetInt("LaserPointer", -1) == -1)
         {
-            PlayerPrefs.SetInt("LaserPointer", 0);
+            PlayerPrefs.SetInt("LaserPointer", 1);
         }
     }
     
