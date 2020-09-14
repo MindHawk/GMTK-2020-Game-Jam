@@ -101,7 +101,7 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 14
   torque: 4.8
-  shotCooldown: 0.75
+  shotCooldown: 0.375
   projectileOrigins:
   - {fileID: 8053577412416119612}
   smokeParticles:
@@ -110,6 +110,9 @@ MonoBehaviour:
   multiStageShoot: 0
   multiStageShotsAmount: 3
   multiStageShotsDelay: 0.12
+  projectilesPerShot: 1
+  shotHeatGeneration: 0.75
+  player: {fileID: 0}
 --- !u!1 &6379697924343681191
 GameObject:
   m_ObjectHideFlags: 0

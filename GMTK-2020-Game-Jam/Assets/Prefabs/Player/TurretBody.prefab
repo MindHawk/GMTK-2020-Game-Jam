@@ -2354,6 +2354,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcb7dea82b5261d4397bdaa541b9a9f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2554103686201999069}
 --- !u!1 &8166081435141450803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3115,6 +3116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fcb7dea82b5261d4397bdaa541b9a9f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 2554103686201999069}
 --- !u!1 &9075037338106188602
 GameObject:
   m_ObjectHideFlags: 0
@@ -3220,6 +3222,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lives: 3
+  heatCapacity: 10
+  heatDecayPerSecond: 1
+  currentHeat: 0
   HealthIcons:
   - {fileID: 613014548339529866}
   - {fileID: 5245054203076924615}

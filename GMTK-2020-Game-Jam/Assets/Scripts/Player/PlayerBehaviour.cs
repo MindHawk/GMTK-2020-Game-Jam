@@ -9,6 +9,12 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField]
     private int lives;
     [SerializeField]
+    private float heatCapacity;
+    [SerializeField]
+    private float heatDecayPerSecond;
+    [SerializeField] //Remove
+    private float currentHeat;
+    [SerializeField]
     private List<Image> HealthIcons;
     [SerializeField]
     private GameObject GameOverParent;
@@ -53,6 +59,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void Update()
     {
         _immuneTimeRemaining -= Time.deltaTime;
+        UpdateHeat();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -108,6 +115,31 @@ public class PlayerBehaviour : MonoBehaviour
         {
             BrokeRecord.SetActive(true);
             PlayerPrefs.SetInt("HighScore", Score);
+        }
+    }
+
+    private void UpdateHeat()
+    {
+        if(currentHeat > 0)
+        {
+            currentHeat -= heatDecayPerSecond * Time.deltaTime;
+        }
+    }
+
+    public void AddHeat(float heat)
+    {
+        currentHeat += heat;
+    }
+
+    public bool CheckHeat()
+    {
+        if(currentHeat < heatCapacity)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
         }
     }
 

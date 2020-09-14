@@ -514,12 +514,17 @@ PrefabInstance:
     - target: {fileID: 2206292945221747857, guid: 92127a6f20ceeb947aa7126875eed19f,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2554103686201999069, guid: 92127a6f20ceeb947aa7126875eed19f,
         type: 3}
       propertyPath: ImmuneTime
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2554103686201999069, guid: 92127a6f20ceeb947aa7126875eed19f,
+        type: 3}
+      propertyPath: heatDecayPerSecond
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4603598954561229160, guid: 92127a6f20ceeb947aa7126875eed19f,
         type: 3}
@@ -625,6 +630,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8550664735135938775, guid: 92127a6f20ceeb947aa7126875eed19f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9075037338106188599, guid: 92127a6f20ceeb947aa7126875eed19f,
         type: 3}
