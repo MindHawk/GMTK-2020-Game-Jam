@@ -7,6 +7,7 @@ public class InputHandler : MonoBehaviour
 {
     public UnityEvent LeftClick = new UnityEvent();
     public UnityEvent RightClick = new UnityEvent();
+    public UnityEvent ActiveAbility = new UnityEvent();
     public UnityEvent PauseGame = new UnityEvent();
 
 
@@ -20,13 +21,17 @@ public class InputHandler : MonoBehaviour
 
     private void HandleInput()
     {
-        if (Input.GetAxis("Fire1") != 0)
+        if (Input.GetButton("Fire1"))
         {
             LeftClick.Invoke();
         }
-        if (Input.GetAxis("Fire2") != 0)
+        if (Input.GetButton("Fire2"))
         {
             RightClick.Invoke();
+        }
+        if (Input.GetButtonDown("Fire3"))
+        {
+            ActiveAbility.Invoke();
         }
         // DO NOT USE AXIS FOR THIS BUTTON PRESS
         // The axis will not change when timescale = 0

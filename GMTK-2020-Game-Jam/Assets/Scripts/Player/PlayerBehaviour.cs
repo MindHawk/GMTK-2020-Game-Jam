@@ -6,26 +6,34 @@ using UnityEngine.UI;
 
 public class PlayerBehaviour : MonoBehaviour
 {
+    [Header("Health")]
     [SerializeField]
     private int lives;
+    [SerializeField]
+    private List<Image> HealthIcons;
+
+    [Header("Heat")]
     [SerializeField]
     private float heatCapacity;
     [SerializeField]
     private float heatDecayPerSecond;
-    [SerializeField] //Remove
     private float currentHeat;
     [SerializeField]
-    private List<Image> HealthIcons;
+    private TextMeshProUGUI heatText;
     [SerializeField]
     private GameObject GameOverParent;
     [HideInInspector]
     public static bool isAlive = true;
+
+    [Header("Enemy Collision")]
     [SerializeField]
     private ParticleSystem ExplosionParticle;
     [SerializeField]
     private AudioClip ExplosionSound;
+
     [HideInInspector]
     public static int Score = 0;
+    [Header("Score")]
     [SerializeField]
     private TextMeshProUGUI ScoreText;
     [SerializeField]
@@ -34,18 +42,23 @@ public class PlayerBehaviour : MonoBehaviour
     private GameObject BrokeRecord;
 
     private float _immuneTimeRemaining;
+    [Header("Damage")]
     public float ImmuneTime;
-
-    private SpriteRenderer sprite;
     [SerializeField]
     private Color DamageColor;
 
+    private SpriteRenderer sprite;
 
     private void FixedUpdate()
     {
         if (ScoreText)
         {
             ScoreText.text = "Score: " + Score;
+        }
+        if (heatText)
+        {
+            heatText.text = "Heat: " + Mathf.Round(currentHeat) + " / " + heatCapacity;
+            //heatText.text = "Heat: " + Mathf.Round(Mathf.Abs((GetHeatCapacityFraction() * 100) - 100)) + " / 100";
         }
     }
 
@@ -141,6 +154,11 @@ public class PlayerBehaviour : MonoBehaviour
         {
             return false;
         }
+    }
+
+    public float GetHeatCapacityFraction()
+    {
+        return (heatCapacity - currentHeat) / heatCapacity;
     }
 
     IEnumerator IndicateDamage(float duration)
