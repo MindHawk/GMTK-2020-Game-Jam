@@ -96,9 +96,10 @@ GameObject:
   - component: {fileID: 1420264959077475185}
   - component: {fileID: 2569911564656823560}
   - component: {fileID: 760509740931164341}
+  - component: {fileID: -6985371473670805054}
   m_Layer: 0
   m_Name: HeatSink
-  m_TagString: Untagged
+  m_TagString: PlayerProjectileUniversal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -338,6 +339,19 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &-6985371473670805054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6436906485539075353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2475538d0051c34e9951f0adf732613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Enemy
 --- !u!1001 &9043691420154719929
 PrefabInstance:
   m_ObjectHideFlags: 0

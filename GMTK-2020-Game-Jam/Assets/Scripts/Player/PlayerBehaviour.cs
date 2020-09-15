@@ -160,6 +160,11 @@ public class PlayerBehaviour : MonoBehaviour
         return (heatCapacity - currentHeat) / heatCapacity;
     }
 
+    public void SetCurrentHeat(float heat)
+    {
+        currentHeat = heat;
+    }
+
     IEnumerator IndicateDamage(float duration)
     {
         

@@ -10,11 +10,17 @@ public class CannonParentBehaviour : MonoBehaviour
     private void Start()
     {
         cannon = GetComponentInChildren<ShootComponent>();
-        cannon.player = player;
+        if(cannon != null)
+        {
+            cannon.player = player;
+        }
     }
     public void Shoot()
     {
-        cannon.Shoot();
+        if(cannon != null)
+        {
+            cannon.Shoot();
+        }
     }
 
     public PlayerBehaviour GetPlayer()
