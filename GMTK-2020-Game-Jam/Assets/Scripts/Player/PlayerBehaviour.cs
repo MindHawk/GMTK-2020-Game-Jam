@@ -13,8 +13,7 @@ public class PlayerBehaviour : MonoBehaviour
     private List<Image> HealthIcons;
 
     [Header("Heat")]
-    [SerializeField]
-    private float heatCapacity;
+    public float heatCapacity;
     [SerializeField]
     private float heatDecayPerSecond;
     private float currentHeat;

@@ -9,9 +9,13 @@ public class CannonManagerComponent : MonoBehaviour
     [SerializeField]
     private GameObject AirCannonParent;
     [SerializeField]
+    private GameObject AbilityParent;
+    [SerializeField]
     private List<GameObject> ShipCannons;
     [SerializeField]
     private List<GameObject> AirCannons;
+    [SerializeField]
+    private List<GameObject> ActiveAbilities;
 
     private void Awake()
     {
@@ -22,6 +26,7 @@ public class CannonManagerComponent : MonoBehaviour
     {
         LoadShipCannon();
         LoadAirCannon();
+        LoadActiveAbilities();
     }
 
     private void LoadShipCannon()
@@ -47,6 +52,18 @@ public class CannonManagerComponent : MonoBehaviour
         }
         Instantiate(AirCannons[PlayerPrefs.GetInt("AirCannon")], AirCannonParent.transform);
 
+    }
+
+    private void LoadActiveAbilities()
+    {
+        if (AbilityParent.transform.childCount > 0)
+        {
+            for (int i = 0; i < AbilityParent.transform.childCount; i++)
+            {
+                Destroy(AbilityParent.transform.GetChild(i).gameObject);
+            }
+        }
+        Instantiate(ActiveAbilities[PlayerPrefs.GetInt("ActiveAbility")], AbilityParent.transform);
     }
 
 }

@@ -16,4 +16,9 @@ public class CannonParentBehaviour : MonoBehaviour
     {
         cannon.Shoot();
     }
+
+    public PlayerBehaviour GetPlayer()
+    {
+        return player;
+    }
 }
