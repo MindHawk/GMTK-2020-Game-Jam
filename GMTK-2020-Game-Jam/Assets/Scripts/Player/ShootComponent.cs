@@ -28,7 +28,12 @@ public class ShootComponent : MonoBehaviour
     [SerializeField] private bool multiStageShoot = false;
     [SerializeField] private int multiStageShotsAmount = 3;
     [SerializeField] private float multiStageShotsDelay = 0.12f;
-    [SerializeField] private int projectilesPerShot = 1; 
+    [SerializeField] private int projectilesPerShot = 1;
+    [Header("Heat")]
+    [SerializeField]
+    private float shotHeatGeneration = 1;
+    [HideInInspector]
+    public PlayerBehaviour player;
 
     private void Awake()
     {
@@ -37,7 +42,7 @@ public class ShootComponent : MonoBehaviour
     }
     public void Shoot()
     {
-        if (_canShoot)
+        if (_canShoot && player.CheckHeat())
         {
             _canShoot = false;
             StartCoroutine(ShotCooldown());
@@ -62,6 +67,7 @@ public class ShootComponent : MonoBehaviour
         {
             _parentRigidBody.AddTorque(torque, ForceMode2D.Impulse);
             InstantiateProjectile();
+            player.AddHeat(shotHeatGeneration);
             PlayParticleSystem();
             PlaySound();
         }
