@@ -56,6 +56,24 @@ TextureImporter:
   - first:
       213: 7332510722348516611
     second: Ship Sprites_8
+  - first:
+      213: 2714680493164400016
+    second: Ship Sprites_9
+  - first:
+      213: 8327809031559576270
+    second: Ship Sprites_10
+  - first:
+      213: -5272614950466174521
+    second: Ship Sprites_9
+  - first:
+      213: -6609194157273273647
+    second: Ship Sprites_10
+  - first:
+      213: 6997950322493676398
+    second: Ship Sprites_11
+  - first:
+      213: 3105018996204115718
+    second: Ship Sprites_12
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -118,7 +136,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -130,7 +148,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -145,11 +163,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 87
-        y: 1056
+        y: 1055
         width: 99
         height: 327
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -253,8 +271,8 @@ TextureImporter:
         y: 511
         width: 140
         height: 336
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -293,10 +311,10 @@ TextureImporter:
         serializedVersion: 2
         x: 78
         y: 75
-        width: 200
-        height: 250
+        width: 198
+        height: 248
       alignment: 9
-      pivot: {x: 0.49076256, y: 0.16498752}
+      pivot: {x: 0.5, y: 0.18}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -312,10 +330,10 @@ TextureImporter:
       name: Ship Sprites_8
       rect:
         serializedVersion: 2
-        x: 749
-        y: 150
-        width: 116
-        height: 92
+        x: 1144
+        y: 298
+        width: 159
+        height: 65
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -325,6 +343,69 @@ TextureImporter:
       bones: []
       spriteID: 305835517af42c560800000000000000
       internalID: 7332510722348516611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ship Sprites_10
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 150
+        width: 115
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1daa3245eec6744a0800000000000000
+      internalID: -6609194157273273647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ship Sprites_11
+      rect:
+        serializedVersion: 2
+        x: 1202
+        y: 204
+        width: 43
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6bd018ddb6bd1160800000000000000
+      internalID: 6997950322493676398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ship Sprites_12
+      rect:
+        serializedVersion: 2
+        x: 1184
+        y: 81
+        width: 172
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6071691735e371b20800000000000000
+      internalID: 3105018996204115718
       vertices: []
       indices: 
       edges: []

@@ -30,7 +30,7 @@ public class EnemyBehaviourComponent : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag(AffectedTag))
+        if(collision.gameObject.CompareTag(AffectedTag) || collision.gameObject.CompareTag("PlayerProjectileUniversal"))
         {
             Health--;
             if (!isDamaged)

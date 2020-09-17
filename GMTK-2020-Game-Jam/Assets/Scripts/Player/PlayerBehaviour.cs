@@ -13,8 +13,7 @@ public class PlayerBehaviour : MonoBehaviour
     private List<Image> HealthIcons;
 
     [Header("Heat")]
-    [SerializeField]
-    private float heatCapacity;
+    public float heatCapacity;
     [SerializeField]
     private float heatDecayPerSecond;
     private float currentHeat;
@@ -159,6 +158,11 @@ public class PlayerBehaviour : MonoBehaviour
     public float GetHeatCapacityFraction()
     {
         return (heatCapacity - currentHeat) / heatCapacity;
+    }
+
+    public void SetCurrentHeat(float heat)
+    {
+        currentHeat = heat;
     }
 
     IEnumerator IndicateDamage(float duration)

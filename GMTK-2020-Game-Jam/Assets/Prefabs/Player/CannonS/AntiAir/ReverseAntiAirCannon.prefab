@@ -199,7 +199,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -2402460771033038879, guid: aae96536c6d267c4aa0bc5e75b9efd1c,
+  m_Sprite: {fileID: 8327809031559576270, guid: aae96536c6d267c4aa0bc5e75b9efd1c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -243,7 +243,7 @@ MonoBehaviour:
   multiStageShotsAmount: 4
   multiStageShotsDelay: 0.075
   projectilesPerShot: 1
-  shotHeatGeneration: 0.8
+  shotHeatGeneration: 0.3
   player: {fileID: 0}
 --- !u!1001 &1653671080751831266
 PrefabInstance:

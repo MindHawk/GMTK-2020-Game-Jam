@@ -112,7 +112,7 @@ MonoBehaviour:
   multiStageShotsAmount: 1
   multiStageShotsDelay: 0
   projectilesPerShot: 2
-  shotHeatGeneration: 1
+  shotHeatGeneration: 0.5
   player: {fileID: 0}
 --- !u!1 &7214613261850085225
 GameObject:

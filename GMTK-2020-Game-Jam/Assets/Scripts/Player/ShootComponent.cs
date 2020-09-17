@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Serialization;
+using UnityEngine.Events;
 
 public class ShootComponent : MonoBehaviour
 {
@@ -32,15 +33,17 @@ public class ShootComponent : MonoBehaviour
     [Header("Heat")]
     [SerializeField]
     private float shotHeatGeneration = 1;
-    [HideInInspector]
+    //[HideInInspector]
     public PlayerBehaviour player;
+
+    protected UnityEvent Reloaded = new UnityEvent();
 
     private void Awake()
     {
         _parentRigidBody = GetComponentInParent<Rigidbody2D>();
         _lastProjectileOrigin = (projectileOrigins.Count - 1);
     }
-    public void Shoot()
+    public virtual void Shoot()
     {
         if (_canShoot && player.CheckHeat())
         {
@@ -82,6 +85,7 @@ public class ShootComponent : MonoBehaviour
     private IEnumerator ShotCooldown()
     {
         yield return new WaitForSeconds(shotCooldown);
+        Reloaded.Invoke();
         _canShoot = true;
     }
 
