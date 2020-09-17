@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HeatSinkShootComponent : ShootComponent
 {
-    [Header("Heat")]
+    [Header("Heat Modifiers")]
     [SerializeField]
     private float heatSinkCapacity;
     private float baseHeatCapacity;
@@ -17,8 +17,10 @@ public class HeatSinkShootComponent : ShootComponent
     private List<SpriteRenderer> VisualIndicatorSprites;
     [SerializeField]
     private Gradient HeatGradient;
+
     private void Start()
     {
+        Debug.Log(player);
         baseHeatCapacity = player.heatCapacity;
         player.heatCapacity = baseHeatCapacity + heatSinkCapacity;
         Reloaded.AddListener(OnReload);

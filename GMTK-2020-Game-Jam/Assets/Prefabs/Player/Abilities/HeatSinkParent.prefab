@@ -203,6 +203,7 @@ MonoBehaviour:
   projectilesPerShot: 1
   shotHeatGeneration: 0.2
   player: {fileID: 0}
+  DebugCheck: 1
   heatSinkCapacity: 3
   heatCapacityPenalty: 2
   VisualIndicators:

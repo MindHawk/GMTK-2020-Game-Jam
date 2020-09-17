@@ -243,7 +243,7 @@ MonoBehaviour:
   multiStageShotsAmount: 4
   multiStageShotsDelay: 0.075
   projectilesPerShot: 1
-  shotHeatGeneration: 0.8
+  shotHeatGeneration: 0.3
   player: {fileID: 0}
 --- !u!1001 &1653671080751831266
 PrefabInstance:

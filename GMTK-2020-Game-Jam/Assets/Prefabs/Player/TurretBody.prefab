@@ -571,6 +571,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2554103686201999069}
+  DebugCheck: 1
 --- !u!1 &1555848535940923463
 GameObject:
   m_ObjectHideFlags: 0
@@ -2562,6 +2563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2554103686201999069}
+  DebugCheck: 0
 --- !u!1 &8166081435141450803
 GameObject:
   m_ObjectHideFlags: 0
@@ -3325,6 +3327,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2554103686201999069}
+  DebugCheck: 0
 --- !u!1 &9075037338106188602
 GameObject:
   m_ObjectHideFlags: 0

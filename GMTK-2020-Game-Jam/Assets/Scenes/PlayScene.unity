@@ -543,7 +543,7 @@ PrefabInstance:
         type: 3}
       propertyPath: ActiveAbilities.Array.data[0]
       value: 
-      objectReference: {fileID: 715071561236993737, guid: bdc02ade463d16b4cb08569f531fcb87,
+      objectReference: {fileID: 363393294559605754, guid: 5c73ffc22e234c94b8be2cbe5c3a75ad,
         type: 3}
     - target: {fileID: 2046761929098693690, guid: 92127a6f20ceeb947aa7126875eed19f,
         type: 3}
