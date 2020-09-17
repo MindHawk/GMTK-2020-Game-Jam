@@ -33,7 +33,7 @@ public class ShootComponent : MonoBehaviour
     [Header("Heat")]
     [SerializeField]
     private float shotHeatGeneration = 1;
-    //[HideInInspector]
+    [HideInInspector]
     public PlayerBehaviour player;
 
     protected UnityEvent Reloaded = new UnityEvent();
