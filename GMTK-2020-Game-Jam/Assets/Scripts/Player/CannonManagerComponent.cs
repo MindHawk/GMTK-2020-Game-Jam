@@ -39,6 +39,7 @@ public class CannonManagerComponent : MonoBehaviour
             }
         }
         Instantiate(ShipCannons[PlayerPrefs.GetInt("ShipCannon")], ShipCannonParent.transform);
+        ShipCannonParent.GetComponent<CannonParentBehaviour>().SetupCannon();
     }
 
     private void LoadAirCannon()
@@ -51,7 +52,7 @@ public class CannonManagerComponent : MonoBehaviour
             }
         }
         Instantiate(AirCannons[PlayerPrefs.GetInt("AirCannon")], AirCannonParent.transform);
-
+        AirCannonParent.GetComponent<CannonParentBehaviour>().SetupCannon();
     }
 
     private void LoadActiveAbilities()
@@ -64,6 +65,7 @@ public class CannonManagerComponent : MonoBehaviour
             }
         }
         Instantiate(ActiveAbilities[PlayerPrefs.GetInt("ActiveAbility")], AbilityParent.transform);
+        AbilityParent.GetComponent<CannonParentBehaviour>().SetupCannon();
     }
 
 }

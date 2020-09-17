@@ -7,14 +7,7 @@ public class CannonParentBehaviour : MonoBehaviour
     private ShootComponent cannon;
     [SerializeField]
     private PlayerBehaviour player;
-    private void Start()
-    {
-        cannon = GetComponentInChildren<ShootComponent>();
-        if(cannon != null)
-        {
-            cannon.player = player;
-        }
-    }
+
     public void Shoot()
     {
         if(cannon != null)
@@ -26,5 +19,14 @@ public class CannonParentBehaviour : MonoBehaviour
     public PlayerBehaviour GetPlayer()
     {
         return player;
+    }
+
+    public void SetupCannon()
+    {
+        cannon = GetComponentInChildren<ShootComponent>();
+        if (cannon != null)
+        {
+            cannon.player = player;
+        }
     }
 }

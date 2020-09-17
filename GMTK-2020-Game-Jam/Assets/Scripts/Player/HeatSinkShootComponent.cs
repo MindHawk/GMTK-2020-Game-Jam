@@ -20,7 +20,6 @@ public class HeatSinkShootComponent : ShootComponent
 
     private void Start()
     {
-        Debug.Log(player);
         baseHeatCapacity = player.heatCapacity;
         player.heatCapacity = baseHeatCapacity + heatSinkCapacity;
         Reloaded.AddListener(OnReload);
