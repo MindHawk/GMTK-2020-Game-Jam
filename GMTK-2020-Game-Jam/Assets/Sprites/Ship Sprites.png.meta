@@ -4,79 +4,97 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: 8696869006673934908
-    second: Ship Sprites_0
+    second: HeavyShipCannon
   - first:
       213: -3337454293778964314
-    second: Ship Sprites_1
+    second: RapidFireCannon
   - first:
       213: -1140633627310515593
-    second: Ship Sprites_2
+    second: Bullet
   - first:
       213: 5184184653534415544
-    second: Ship Sprites_0
+    second: HeavyShipCannon
   - first:
       213: -7721013831678455233
-    second: Ship Sprites_1
+    second: RapidFireCannon
   - first:
       213: 2108221153592747631
-    second: Ship Sprites_2
+    second: Bullet
   - first:
       213: -2220352457462389501
-    second: Ship Sprites_3
+    second: TurretBase
   - first:
       213: 8513421548691854877
-    second: Ship Sprites_3
+    second: TurretBase
   - first:
       213: 1153764284828504690
-    second: Ship Sprites_4
+    second: MetalSheet
   - first:
       213: -4187411339797056044
-    second: Ship Sprites_5
+    second: HighVelocityCannon
   - first:
       213: -1372298992902232168
-    second: Ship Sprites_6
+    second: AirBurstCannon
   - first:
       213: 7330873964418990861
-    second: Ship Sprites_4
+    second: MetalSheet
   - first:
       213: 3867027365300975812
-    second: Ship Sprites_5
+    second: HighVelocityCannon
   - first:
       213: -3469023269719869384
-    second: Ship Sprites_6
+    second: AirBurstCannon
   - first:
       213: -4654797805034428764
-    second: Ship Sprites_7
+    second: ScatterCannon
   - first:
       213: -2402460771033038879
-    second: Ship Sprites_8
+    second: HeatSinkCoil
   - first:
       213: 6462378301424286473
-    second: Ship Sprites_7
+    second: ScatterCannon
   - first:
       213: 7332510722348516611
-    second: Ship Sprites_8
+    second: HeatSinkCoil
   - first:
       213: 2714680493164400016
-    second: Ship Sprites_9
+    second: BrakeRing
   - first:
       213: 8327809031559576270
-    second: Ship Sprites_10
+    second: ReverseCannon
   - first:
       213: -5272614950466174521
-    second: Ship Sprites_9
+    second: BrakeRing
   - first:
       213: -6609194157273273647
-    second: Ship Sprites_10
+    second: ReverseCannon
   - first:
       213: 6997950322493676398
-    second: Ship Sprites_11
+    second: HeatSinkProjectile
   - first:
       213: 3105018996204115718
-    second: Ship Sprites_12
+    second: HeatSinkBase
   - first:
       213: -8945481124677618368
-    second: Ship Sprites_13
+    second: FlameCannon
+  - first:
+      213: -3961981105179787733
+    second: IceShard
+  - first:
+      213: -8845534337272831870
+    second: IceShardCannon
+  - first:
+      213: 7030610251550306760
+    second: Missile
+  - first:
+      213: -2834577192652745271
+    second: MissileCannonBase
+  - first:
+      213: 8995921805871954332
+    second: MissileCannonBack
+  - first:
+      213: -3721083562160638342
+    second: HeavyAirCannon
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -162,7 +180,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ship Sprites_0
+      name: HeavyShipCannon
       rect:
         serializedVersion: 2
         x: 87
@@ -183,7 +201,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship Sprites_1
+      name: RapidFireCannon
       rect:
         serializedVersion: 2
         x: 746
@@ -204,7 +222,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship Sprites_2
+      name: Bullet
       rect:
         serializedVersion: 2
         x: 116
@@ -225,7 +243,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship Sprites_3
+      name: TurretBase
       rect:
         serializedVersion: 2
         x: 256
@@ -246,7 +264,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship Sprites_4
+      name: MetalSheet
       rect:
         serializedVersion: 2
         x: 16
@@ -267,10 +285,10 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship Sprites_5
+      name: HighVelocityCannon
       rect:
         serializedVersion: 2
-        x: 70
+        x: 69
         y: 511
         width: 140
         height: 336
@@ -288,7 +306,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship Sprites_6
+      name: AirBurstCannon
       rect:
         serializedVersion: 2
         x: 768
@@ -309,11 +327,11 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship Sprites_7
+      name: ScatterCannon
       rect:
         serializedVersion: 2
         x: 78
-        y: 75
+        y: 77
         width: 198
         height: 248
       alignment: 9
@@ -330,7 +348,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship Sprites_8
+      name: HeatSinkCoil
       rect:
         serializedVersion: 2
         x: 1144
@@ -351,7 +369,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship Sprites_10
+      name: ReverseCannon
       rect:
         serializedVersion: 2
         x: 749
@@ -372,7 +390,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship Sprites_11
+      name: HeatSinkProjectile
       rect:
         serializedVersion: 2
         x: 1202
@@ -393,7 +411,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship Sprites_12
+      name: HeatSinkBase
       rect:
         serializedVersion: 2
         x: 1184
@@ -414,7 +432,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship Sprites_9
+      name: BrakeRing
       rect:
         serializedVersion: 2
         x: 881
@@ -435,7 +453,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Ship Sprites_13
+      name: FlameCannon
       rect:
         serializedVersion: 2
         x: 308
@@ -443,7 +461,7 @@ TextureImporter:
         width: 189
         height: 330
       alignment: 9
-      pivot: {x: 0.5, y: 0.28526944}
+      pivot: {x: 0.5, y: 0.3}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -451,6 +469,132 @@ TextureImporter:
       bones: []
       spriteID: 045f0a2ff444bd380800000000000000
       internalID: -8945481124677618368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceShard
+      rect:
+        serializedVersion: 2
+        x: 386
+        y: 161
+        width: 64
+        height: 109
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2ef2f22d273409c0800000000000000
+      internalID: -3961981105179787733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: IceShardCannon
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 29
+        width: 174
+        height: 327
+      alignment: 9
+      pivot: {x: 0.72, y: 0.33}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 280255ac2695e3580800000000000000
+      internalID: -8845534337272831870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Missile
+      rect:
+        serializedVersion: 2
+        x: 1279
+        y: 493
+        width: 46
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c130e526ceb19160800000000000000
+      internalID: 7030610251550306760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MissileCannonBase
+      rect:
+        serializedVersion: 2
+        x: 1068
+        y: 488
+        width: 123
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5528fbf0f89a8d0800000000000000
+      internalID: -2834577192652745271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MissileCannonBack
+      rect:
+        serializedVersion: 2
+        x: 1066
+        y: 439
+        width: 127
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c993032583fe7dc70800000000000000
+      internalID: 8995921805871954332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HeavyAirCannon
+      rect:
+        serializedVersion: 2
+        x: 1667
+        y: 1088
+        width: 99
+        height: 327
+      alignment: 9
+      pivot: {x: 0.5, y: 0.33}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76bed1273e0c5cc0800000000000000
+      internalID: -3721083562160638342
       vertices: []
       indices: 
       edges: []
