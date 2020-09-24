@@ -14933,6 +14933,7 @@ GameObject:
   - component: {fileID: 1983885588592954237}
   - component: {fileID: 8596701873593514277}
   - component: {fileID: 5609147314845317207}
+  - component: {fileID: -692155357181089645}
   m_Layer: 0
   m_Name: BigEvilEnemy
   m_TagString: Enemy
@@ -14988,6 +14989,7 @@ MonoBehaviour:
   ScoreValue: 400
   DamageParticle: {fileID: 263304197152590805}
   DamagedSprite: {fileID: 21300000, guid: 214c578e4b6ad8d4aab36e4f6e394429, type: 3}
+  DamageColor: {r: 0, g: 0, b: 0, a: 0}
   Health: 2
 --- !u!50 &8596701873593514277
 Rigidbody2D:
@@ -15036,3 +15038,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &-692155357181089645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8596701873593514276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2475538d0051c34e9951f0adf732613, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetTag: Enemy
