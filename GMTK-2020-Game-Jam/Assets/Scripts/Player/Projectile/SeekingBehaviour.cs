@@ -8,6 +8,10 @@ public class SeekingBehaviour : MonoBehaviour
     private Rigidbody2D ParentBody;
     [SerializeField]
     private float HomingSpeed;
+    [SerializeField]
+    private bool DestroyOnImpact = true;
+    [SerializeField]
+    private ParticleSystem ExplosionParticle;
 
     private GameObject homingTarget;
 
@@ -17,6 +21,14 @@ public class SeekingBehaviour : MonoBehaviour
         {
             homingTarget = collision.gameObject;
             ParentBody.drag = 10;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            ExplosionParticle.Play();
         }
     }
 
@@ -34,7 +46,5 @@ public class SeekingBehaviour : MonoBehaviour
                 ParentBody.transform.rotation = Quaternion.AngleAxis(angle + 90, Vector3.forward);
             }
         }
-
-
     }
 }
