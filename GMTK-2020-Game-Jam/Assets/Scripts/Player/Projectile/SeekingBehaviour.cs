@@ -16,6 +16,7 @@ public class SeekingBehaviour : MonoBehaviour
         if(collision.gameObject.tag == "Enemy")
         {
             homingTarget = collision.gameObject;
+            ParentBody.drag = 10;
         }
     }
 

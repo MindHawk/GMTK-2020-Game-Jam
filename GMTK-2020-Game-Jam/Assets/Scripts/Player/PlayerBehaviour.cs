@@ -48,6 +48,8 @@ public class PlayerBehaviour : MonoBehaviour
 
     private SpriteRenderer sprite;
 
+    public Rigidbody2D _rigidbody { get; private set; }
+
     private void FixedUpdate()
     {
         if (ScoreText)
@@ -66,6 +68,7 @@ public class PlayerBehaviour : MonoBehaviour
         isAlive = true;
         Score = 0; // Reset score or this carries over between scenes
         sprite = GetComponentInChildren<SpriteRenderer>();
+        _rigidbody = GetComponent<Rigidbody2D>();
     }
 
     private void Update()
@@ -140,7 +143,10 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void AddHeat(float heat)
     {
-        currentHeat += heat;
+        if(currentHeat + heat > 0 && currentHeat + heat <= heatCapacity)
+        {
+            currentHeat += heat;
+        }
     }
 
     public bool CheckHeat()
@@ -162,7 +168,15 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void SetCurrentHeat(float heat)
     {
-        currentHeat = heat;
+        if(heat > 0 && heat < heatCapacity)
+        {
+            currentHeat = heat;
+        }
+    }
+
+    public float GetCurrentHeat()
+    {
+        return currentHeat;
     }
 
     IEnumerator IndicateDamage(float duration)

@@ -23,7 +23,7 @@ public class ShootComponent : MonoBehaviour
     private List<ParticleSystem> smokeParticles;
     [SerializeField]
     private AudioClip FireSound;
-    private bool _canShoot = true;
+    public bool _canShoot { get; private set; }
     private int _lastProjectileOrigin = 0;
     [Header("Multishot")]
     [SerializeField] private bool multiStageShoot = false;
@@ -33,6 +33,13 @@ public class ShootComponent : MonoBehaviour
     [Header("Heat")]
     [SerializeField]
     private float shotHeatGeneration = 1;
+    [Header("Visuals")]
+    [SerializeField]
+    private bool hasVisualAmmoIndicators = false;
+    [SerializeField]
+    private List<GameObject> visualAmmoIndicators = new List<GameObject>();
+    private int currentProjectileOriginIndex;
+
     [HideInInspector]
     public PlayerBehaviour player;
 
@@ -40,6 +47,7 @@ public class ShootComponent : MonoBehaviour
 
     private void Awake()
     {
+        _canShoot = true;
         _parentRigidBody = GetComponentInParent<Rigidbody2D>();
         _lastProjectileOrigin = (projectileOrigins.Count - 1);
     }
@@ -73,7 +81,23 @@ public class ShootComponent : MonoBehaviour
             player.AddHeat(shotHeatGeneration);
             PlayParticleSystem();
             PlaySound();
+            if (hasVisualAmmoIndicators)
+            {
+                HideAmmoIndicator(currentProjectileOriginIndex);
+            }
         }
+    }
+
+    private void HideAmmoIndicator(int index)
+    {
+        visualAmmoIndicators[index].SetActive(false);
+        StartCoroutine(ReloadAmmoIndicatorAfterShot(index));
+    }
+
+    IEnumerator ReloadAmmoIndicatorAfterShot(int index)
+    {
+        yield return new WaitForSeconds(shotCooldown);
+        visualAmmoIndicators[index].SetActive(true);
     }
     
     private IEnumerator DelayedShot(float shotDelay)
@@ -109,6 +133,7 @@ public class ShootComponent : MonoBehaviour
             _lastProjectileOrigin = 0;
         }
         Transform nextOrigin = projectileOrigins[_lastProjectileOrigin];
+        currentProjectileOriginIndex = _lastProjectileOrigin;
         return nextOrigin;
     }
 

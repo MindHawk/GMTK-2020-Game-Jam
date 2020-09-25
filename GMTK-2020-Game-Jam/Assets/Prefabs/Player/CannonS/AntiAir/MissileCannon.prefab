@@ -106,7 +106,7 @@ MonoBehaviour:
     type: 3}
   projectileSpeed: 8
   torque: -1
-  shotCooldown: 0.6
+  shotCooldown: 0.45
   projectileOrigins:
   - {fileID: 1791061745814160543}
   - {fileID: 2528250753234602920}
@@ -114,11 +114,15 @@ MonoBehaviour:
   - {fileID: 8786966165998989693}
   - {fileID: 3116932786683500100}
   FireSound: {fileID: 8300000, guid: 1b2fb259c2a96c34d9036c2a44219c14, type: 3}
-  multiStageShoot: 1
+  multiStageShoot: 0
   multiStageShotsAmount: 1
   multiStageShotsDelay: 0.25
   projectilesPerShot: 1
-  shotHeatGeneration: 0.4
+  shotHeatGeneration: 0.8
+  hasVisualAmmoIndicators: 1
+  visualAmmoIndicators:
+  - {fileID: 5858417551449012665}
+  - {fileID: 4885387117905468908}
   player: {fileID: 0}
 --- !u!1 &4885387117905468908
 GameObject:

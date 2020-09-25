@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1465199226781237628}
   - component: {fileID: 1465199226781237629}
-  - component: {fileID: 1465199226781237630}
+  - component: {fileID: 4530487272076484812}
   m_Layer: 0
   m_Name: IceShardCannon
   m_TagString: Untagged
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1465199226781237630
+--- !u!114 &4530487272076484812
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1465199226781237635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 046139925b46db14bbc14a06bb63844d, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fb94b33d7696ae4390c1130af5ab1c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 4980358498369385352, guid: fd9c87515ef85b14c8003a19a816ccf9,
@@ -113,6 +113,9 @@ MonoBehaviour:
   projectilesPerShot: 1
   shotHeatGeneration: -0.75
   player: {fileID: 0}
+  frostBuildup: 1
+  maxFrostBuildup: 10
+  frostDecay: 0.5
 --- !u!1 &6913443238119252640
 GameObject:
   m_ObjectHideFlags: 0
