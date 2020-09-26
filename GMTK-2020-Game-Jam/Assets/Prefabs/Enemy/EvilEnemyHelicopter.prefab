@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 598899790040100958}
   m_Layer: 0
   m_Name: EvilEnemyHelicopter
-  m_TagString: Enemy
+  m_TagString: EnemyAir
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,6 +68,10 @@ MonoBehaviour:
     type: 3}
   DeathSound: {fileID: 8300000, guid: 6cae95564172f5748aa62a62f7307b99, type: 3}
   ScoreValue: 200
+  DamageParticle: {fileID: 0}
+  DamagedSprite: {fileID: 0}
+  DamageColor: {r: 0, g: 0, b: 0, a: 0}
+  Health: 1
 --- !u!50 &3663000047243260204
 Rigidbody2D:
   serializedVersion: 4

@@ -102,7 +102,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -8945481124677618368, guid: aae96536c6d267c4aa0bc5e75b9efd1c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -136,12 +136,14 @@ MonoBehaviour:
   - {fileID: 1986734216054723784}
   smokeParticles:
   - {fileID: 5007721084650478692}
-  FireSound: {fileID: 8300000, guid: 6cae95564172f5748aa62a62f7307b99, type: 3}
+  FireSound: {fileID: 8300000, guid: aee3f6e3a2364154697833e0cfcf2e65, type: 3}
   multiStageShoot: 0
   multiStageShotsAmount: 3
   multiStageShotsDelay: 0.12
   projectilesPerShot: 1
   shotHeatGeneration: 0.3
+  hasVisualAmmoIndicators: 0
+  visualAmmoIndicators: []
   player: {fileID: 0}
 --- !u!1001 &6350845964896859436
 PrefabInstance:
@@ -183,7 +185,7 @@ PrefabInstance:
     - target: {fileID: 2115639637873862984, guid: d5a084e552bc74d40ab612c484400d93,
         type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
-      value: 100
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 2115639637873862984, guid: d5a084e552bc74d40ab612c484400d93,
         type: 3}
@@ -428,7 +430,7 @@ PrefabInstance:
     - target: {fileID: 2914917224998924600, guid: d5a084e552bc74d40ab612c484400d93,
         type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3092393665400080101, guid: d5a084e552bc74d40ab612c484400d93,
         type: 3}

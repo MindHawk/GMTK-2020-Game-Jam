@@ -73,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -4187411339797056044, guid: aae96536c6d267c4aa0bc5e75b9efd1c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -113,6 +113,8 @@ MonoBehaviour:
   multiStageShotsDelay: 0
   projectilesPerShot: 2
   shotHeatGeneration: 0.5
+  hasVisualAmmoIndicators: 0
+  visualAmmoIndicators: []
   player: {fileID: 0}
 --- !u!1 &7214613261850085225
 GameObject:

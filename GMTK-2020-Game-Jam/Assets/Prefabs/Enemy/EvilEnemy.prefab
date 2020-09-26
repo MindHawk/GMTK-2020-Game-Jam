@@ -9624,7 +9624,7 @@ GameObject:
   - component: {fileID: 5609147314845317207}
   m_Layer: 0
   m_Name: EvilEnemy
-  m_TagString: Enemy
+  m_TagString: EnemyShip
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9675,6 +9675,10 @@ MonoBehaviour:
     type: 3}
   DeathSound: {fileID: 8300000, guid: 23608a5e2750e704ea80384e8f4559e6, type: 3}
   ScoreValue: 100
+  DamageParticle: {fileID: 0}
+  DamagedSprite: {fileID: 0}
+  DamageColor: {r: 0, g: 0, b: 0, a: 0}
+  Health: 1
 --- !u!50 &8596701873593514277
 Rigidbody2D:
   serializedVersion: 4
