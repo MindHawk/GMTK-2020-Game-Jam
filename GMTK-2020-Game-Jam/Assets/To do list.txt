@@ -1,0 +1,12 @@
+Brakering:
+- too little friction
+Flamethrower:
+- Redesign entirely
+Heat:
+- Check if attempted shot would exceed heat capacity
+Missile:
+- Give missiles arming time
+Customistation:
+- Balance unlock scores
+Heat sink:
+- Fix issue where heat isn't instantly reduced to zero when ejecting
