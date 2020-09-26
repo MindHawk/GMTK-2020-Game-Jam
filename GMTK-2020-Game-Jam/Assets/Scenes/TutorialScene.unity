@@ -165,7 +165,7 @@ MonoBehaviour:
   LeftClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9075037338522898017}
+      - m_Target: {fileID: 9075037338522898077}
         m_MethodName: Shoot
         m_Mode: 1
         m_Arguments:
@@ -179,7 +179,7 @@ MonoBehaviour:
   RightClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9075037337640502602}
+      - m_Target: {fileID: 9075037337640502604}
         m_MethodName: Shoot
         m_Mode: 1
         m_Arguments:
@@ -1489,6 +1489,7 @@ MonoBehaviour:
   ScoreValue: 1
   DamageParticle: {fileID: 0}
   DamagedSprite: {fileID: 0}
+  DamageColor: {r: 0, g: 0, b: 0, a: 0}
   Health: 1
 --- !u!4 &1984649501271906340
 Transform:
@@ -6270,11 +6271,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  heatCapacity: 0
+  heatDecayPerSecond: 0
+  heatText: {fileID: 0}
   GameOverParent: {fileID: 0}
   ExplosionParticle: {fileID: 3166519191012352185, guid: 525e5c6cfbe9bdb47b035d9efe556b7f,
     type: 3}
   ExplosionSound: {fileID: 8300000, guid: 6cae95564172f5748aa62a62f7307b99, type: 3}
   ScoreText: {fileID: 0}
+  HighScoreText: {fileID: 0}
+  BrokeRecord: {fileID: 0}
+  ImmuneTime: 0
+  DamageColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!95 &2845941029149611566
 Animator:
   serializedVersion: 3
@@ -6927,6 +6935,7 @@ MonoBehaviour:
   ScoreValue: 2
   DamageParticle: {fileID: 0}
   DamagedSprite: {fileID: 0}
+  DamageColor: {r: 0, g: 0, b: 0, a: 0}
   Health: 1
 --- !u!1 &7146412467670286170
 GameObject:
@@ -11916,7 +11925,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &9075037337640502602
+--- !u!1 &9075037337640502603
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9075037337640502600}
+  - component: {fileID: 9075037337640502601}
+  - component: {fileID: 9075037337640502604}
+  m_Layer: 0
+  m_Name: RightBarrel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &9075037337640502604
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11925,7 +11952,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9075037337640502603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 046139925b46db14bbc14a06bb63844d, type: 3}
+  m_Script: {fileID: 11500000, guid: 005e798f0464537458142275fabd1699, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 976319766121788616, guid: 9e99a067a02c2494ab9cf059e2104b99,
@@ -11945,49 +11972,10 @@ MonoBehaviour:
   multiStageShoot: 1
   multiStageShotsAmount: 3
   multiStageShotsDelay: 0.25
---- !u!1 &9075037337640502603
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 9075037337640502600}
-  - component: {fileID: 9075037337640502601}
-  - component: {fileID: 9075037337640502602}
-  m_Layer: 0
-  m_Name: RightBarrel
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &9075037338522898017
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9075037338522898076}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 046139925b46db14bbc14a06bb63844d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  projectile: {fileID: 1681014414738486900, guid: 0850e54798069e440af853d29b61f748,
-    type: 3}
-  projectileSpeed: 20
-  torque: 4.8
-  shotCooldown: 0.75
-  projectileOrigins:
-  - {fileID: 78856956384943652}
-  smokeParticles:
-  - {fileID: 1429858128}
-  FireSound: {fileID: 8300000, guid: 6cae95564172f5748aa62a62f7307b99, type: 3}
-  multiStageShoot: 0
-  multiStageShotsAmount: 3
-  multiStageShotsDelay: 0.12
+  projectilesPerShot: 1
+  shotHeatGeneration: 1
+  hasVisualAmmoIndicators: 0
+  visualAmmoIndicators: []
 --- !u!212 &9075037338522898018
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -12065,7 +12053,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9075037338522898019}
   - component: {fileID: 9075037338522898018}
-  - component: {fileID: 9075037338522898017}
+  - component: {fileID: 9075037338522898077}
   m_Layer: 0
   m_Name: LeftBarrel
   m_TagString: Untagged
@@ -12073,6 +12061,35 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9075037338522898077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9075037338522898076}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 005e798f0464537458142275fabd1699, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 1681014414738486900, guid: 0850e54798069e440af853d29b61f748,
+    type: 3}
+  projectileSpeed: 20
+  torque: 4.8
+  shotCooldown: 0.75
+  projectileOrigins:
+  - {fileID: 78856956384943652}
+  smokeParticles:
+  - {fileID: 1429858128}
+  FireSound: {fileID: 8300000, guid: 6cae95564172f5748aa62a62f7307b99, type: 3}
+  multiStageShoot: 0
+  multiStageShotsAmount: 3
+  multiStageShotsDelay: 0.12
+  projectilesPerShot: 1
+  shotHeatGeneration: 1
+  hasVisualAmmoIndicators: 0
+  visualAmmoIndicators: []
 --- !u!50 &9075037339674574149
 Rigidbody2D:
   serializedVersion: 4

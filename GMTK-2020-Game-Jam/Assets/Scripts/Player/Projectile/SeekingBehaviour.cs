@@ -9,6 +9,8 @@ public class SeekingBehaviour : MonoBehaviour
     [SerializeField]
     private float HomingSpeed;
     [SerializeField]
+    private List<string> HomingTargetTags;
+    [SerializeField]
     private bool DestroyOnImpact = true;
     [SerializeField]
     private ParticleSystem ExplosionParticle;
@@ -17,7 +19,7 @@ public class SeekingBehaviour : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Enemy")
+        if(HomingTargetTags.Contains(collision.gameObject.tag))
         {
             homingTarget = collision.gameObject;
             ParentBody.drag = 10;
@@ -26,7 +28,7 @@ public class SeekingBehaviour : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemy")
+        if (HomingTargetTags.Contains(collision.gameObject.tag))
         {
             ExplosionParticle.Play();
         }

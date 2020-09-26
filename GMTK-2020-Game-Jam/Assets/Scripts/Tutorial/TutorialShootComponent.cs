@@ -1,11 +1,10 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
-public class ShootComponent : MonoBehaviour
+public class TutorialShootComponent : MonoBehaviour
 {
     private Rigidbody2D _parentRigidBody;
     [Header("Projectile Attributes")]
@@ -17,13 +16,14 @@ public class ShootComponent : MonoBehaviour
     private float torque = 3;
     [SerializeField]
     private float shotCooldown = 1;
-    [FormerlySerializedAs("ProjectileOrigins")] [SerializeField]
+    [FormerlySerializedAs("ProjectileOrigins")]
+    [SerializeField]
     private List<Transform> projectileOrigins;
-    [FormerlySerializedAs("SmokeParticles")] [SerializeField]
+    [FormerlySerializedAs("SmokeParticles")]
+    [SerializeField]
     private List<ParticleSystem> smokeParticles;
     [SerializeField]
     private AudioClip FireSound;
-    private float SoundStartTime = 0;
     public bool _canShoot { get; private set; }
     private int _lastProjectileOrigin = 0;
     [Header("Multishot")]
@@ -41,9 +41,6 @@ public class ShootComponent : MonoBehaviour
     private List<GameObject> visualAmmoIndicators = new List<GameObject>();
     private int currentProjectileOriginIndex;
 
-    [HideInInspector]
-    public PlayerBehaviour player;
-
     protected UnityEvent Reloaded = new UnityEvent();
 
     private void Awake()
@@ -54,7 +51,7 @@ public class ShootComponent : MonoBehaviour
     }
     public virtual void Shoot()
     {
-        if (_canShoot && player.CheckHeat())
+        if (_canShoot)
         {
             _canShoot = false;
             StartCoroutine(ShotCooldown());
@@ -79,28 +76,12 @@ public class ShootComponent : MonoBehaviour
         {
             _parentRigidBody.AddTorque(torque, ForceMode2D.Impulse);
             InstantiateProjectile();
-            player.AddHeat(shotHeatGeneration);
+
             PlayParticleSystem();
             PlaySound();
-            if (hasVisualAmmoIndicators)
-            {
-                HideAmmoIndicator(currentProjectileOriginIndex);
-            }
         }
     }
 
-    private void HideAmmoIndicator(int index)
-    {
-        visualAmmoIndicators[index].SetActive(false);
-        StartCoroutine(ReloadAmmoIndicatorAfterShot(index));
-    }
-
-    IEnumerator ReloadAmmoIndicatorAfterShot(int index)
-    {
-        yield return new WaitForSeconds(shotCooldown);
-        visualAmmoIndicators[index].SetActive(true);
-    }
-    
     private IEnumerator DelayedShot(float shotDelay)
     {
         yield return new WaitForSeconds(shotDelay);
@@ -123,13 +104,13 @@ public class ShootComponent : MonoBehaviour
 
     private Transform GetNextProjectileOrigin()
     {
-        if(projectileOrigins.Count == 1)
+        if (projectileOrigins.Count == 1)
         {
             _lastProjectileOrigin = 0;
             return projectileOrigins[0];
         }
         _lastProjectileOrigin += 1;
-        if(_lastProjectileOrigin == projectileOrigins.Count)
+        if (_lastProjectileOrigin == projectileOrigins.Count)
         {
             _lastProjectileOrigin = 0;
         }
@@ -145,13 +126,6 @@ public class ShootComponent : MonoBehaviour
 
     private void PlaySound()
     {
-        if(FireSound != null)
-        {
-            if(Time.time - SoundStartTime > FireSound.length - .1f || SoundStartTime == 0)
-            {
-                AudioSource.PlayClipAtPoint(FireSound, transform.position, OptionsContainer.Volume);
-                SoundStartTime = Time.time;
-            }
-        }
+        AudioSource.PlayClipAtPoint(FireSound, transform.position, OptionsContainer.Volume);
     }
 }

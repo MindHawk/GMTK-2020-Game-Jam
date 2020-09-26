@@ -351,7 +351,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2475538d0051c34e9951f0adf732613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTag: Enemy
+  targetTags:
+  - EnemyShip
+  - EnemyAir
 --- !u!1001 &9043691420154719929
 PrefabInstance:
   m_ObjectHideFlags: 0

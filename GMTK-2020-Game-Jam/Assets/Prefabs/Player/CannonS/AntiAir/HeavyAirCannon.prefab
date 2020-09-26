@@ -102,7 +102,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: -3721083562160638342, guid: aae96536c6d267c4aa0bc5e75b9efd1c,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -144,6 +144,8 @@ MonoBehaviour:
   multiStageShotsDelay: 0.25
   projectilesPerShot: 1
   shotHeatGeneration: 0.75
+  hasVisualAmmoIndicators: 0
+  visualAmmoIndicators: []
   player: {fileID: 0}
 --- !u!1001 &1966545951391884103
 PrefabInstance:

@@ -29,6 +29,8 @@ public class PlayerBehaviour : MonoBehaviour
     private ParticleSystem ExplosionParticle;
     [SerializeField]
     private AudioClip ExplosionSound;
+    [SerializeField]
+    private List<string> CollisionTags;
 
     [HideInInspector]
     public static int Score = 0;
@@ -59,7 +61,6 @@ public class PlayerBehaviour : MonoBehaviour
         if (heatText)
         {
             heatText.text = "Heat: " + Mathf.Round(currentHeat) + " / " + heatCapacity;
-            //heatText.text = "Heat: " + Mathf.Round(Mathf.Abs((GetHeatCapacityFraction() * 100) - 100)) + " / 100";
         }
     }
 
@@ -78,7 +79,7 @@ public class PlayerBehaviour : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Enemy"))
+        if(CollisionTags.Contains(collision.gameObject.tag))
         {
             Destroy(collision.gameObject);
             if (_immuneTimeRemaining >= 0)

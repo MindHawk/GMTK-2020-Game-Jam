@@ -269,6 +269,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ParentBody: {fileID: 8279329557626149457}
   HomingSpeed: 10
+  HomingTargetTags:
+  - EnemyAir
   DestroyOnImpact: 1
   ExplosionParticle: {fileID: 4321074183868407859}
 --- !u!1 &6953082388604989444

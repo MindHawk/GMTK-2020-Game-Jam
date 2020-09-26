@@ -5,11 +5,11 @@ using UnityEngine;
 public class DestroyOnContactComponent : MonoBehaviour
 {
     [SerializeField]
-    private string targetTag;
+    private List<string> targetTags;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(targetTag))
+        if (targetTags.Contains(collision.gameObject.tag))
         {
             Destroy(this.gameObject);
         }

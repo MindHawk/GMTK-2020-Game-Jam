@@ -33435,7 +33435,7 @@ GameObject:
   - component: {fileID: 4822961143754465643}
   m_Layer: 0
   m_Name: EvilEnemyPlane
-  m_TagString: Enemy
+  m_TagString: EnemyAir
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33488,6 +33488,7 @@ MonoBehaviour:
   ScoreValue: 100
   DamageParticle: {fileID: 6506829996750209360}
   DamagedSprite: {fileID: 21300000, guid: 8098d873425bdd140a23c1d253839f98, type: 3}
+  DamageColor: {r: 0, g: 0, b: 0, a: 0}
   Health: 2
 --- !u!50 &8679763138414256153
 Rigidbody2D:

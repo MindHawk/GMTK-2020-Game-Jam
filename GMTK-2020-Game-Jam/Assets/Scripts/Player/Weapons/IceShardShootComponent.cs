@@ -15,12 +15,16 @@ public class IceShardShootComponent : ShootComponent
     private float frostDecayDelay;
     private float currentFrostBuildup;
     private float baseDrag;
+    [Header("Frost Visuals")]
+    [SerializeField]
+    private ParticleSystem FrostIndicator;
 
     private Rigidbody2D parentBody;
     private void Start()
     {
         parentBody = player.GetComponent<Rigidbody2D>();
         baseDrag = parentBody.angularDrag;
+        //FrostIndicator.Pause();
     }
 
     public override void Shoot()
@@ -37,6 +41,11 @@ public class IceShardShootComponent : ShootComponent
     private void FixedUpdate()
     {
         parentBody.angularDrag = baseDrag + currentFrostBuildup;
+        if(currentFrostBuildup > maxFrostBuildup)
+        {
+            currentFrostBuildup = maxFrostBuildup;
+        }
+        SetFrostIndicator();
     }
 
     IEnumerator StartFrostDecay()
@@ -54,5 +63,11 @@ public class IceShardShootComponent : ShootComponent
         }
         currentFrostBuildup = 0;
         yield return null;
+    }
+
+    private void SetFrostIndicator()
+    {
+        float frostFraction = Mathf.Abs(1 - (maxFrostBuildup - currentFrostBuildup) / maxFrostBuildup);
+        FrostIndicator.Simulate(frostFraction, false, true);
     }
 }

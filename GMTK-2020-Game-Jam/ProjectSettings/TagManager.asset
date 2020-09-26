@@ -9,6 +9,8 @@ TagManager:
   - PlayerProjectileOrange
   - Enemy
   - PlayerProjectileUniversal
+  - EnemyShip
+  - EnemyAir
   layers:
   - Default
   - TransparentFX
