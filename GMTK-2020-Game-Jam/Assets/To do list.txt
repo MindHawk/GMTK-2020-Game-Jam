@@ -10,3 +10,5 @@ Customistation:
 - Balance unlock scores
 Heat sink:
 - Fix issue where heat isn't instantly reduced to zero when ejecting
+Waves
+- Adjust wave Balance
