@@ -108,8 +108,10 @@ MonoBehaviour:
   multiStageShotsDelay: 0.12
   projectilesPerShot: 1
   shotHeatGeneration: 1
+  hasVisualAmmoIndicators: 0
+  visualAmmoIndicators: []
   player: {fileID: 0}
-  PassiveBrakingForce: 0.2
+  PassiveBrakingForce: 0.5
   ActiveBrakingForce: 10
   ActiveBrakingTime: 0.4
   BrakingParticles:
