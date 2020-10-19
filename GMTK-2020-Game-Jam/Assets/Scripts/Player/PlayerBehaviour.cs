@@ -169,7 +169,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void SetCurrentHeat(float heat)
     {
-        if(heat > 0 && heat < heatCapacity)
+        if(heat >= 0 && heat < heatCapacity)
         {
             currentHeat = heat;
         }

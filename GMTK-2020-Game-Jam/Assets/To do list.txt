@@ -5,10 +5,10 @@ Flamethrower:
 Heat:
 - Check if attempted shot would exceed heat capacity - Fixed
 Missile:
-- Give missiles arming time
+- Give missiles arming time - Fixed
 Customistation:
 - Balance unlock scores
 Heat sink:
-- Fix issue where heat isn't instantly reduced to zero when ejecting
+- Fix issue where heat isn't instantly reduced to zero when ejecting - Fixed
 Waves
 - Adjust wave Balance
