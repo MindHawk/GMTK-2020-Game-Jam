@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class TimedDetonation : MonoBehaviour
 {
@@ -13,6 +14,10 @@ public class TimedDetonation : MonoBehaviour
     [SerializeField]
     private float DetonationRange;
     private bool hasDetonated = false;
+    [SerializeField]
+    private float PostDetonationSpeed = 0;
+
+    public UnityEvent Detonation = new UnityEvent();
 
     private float _timeLeft;
     void Start()
@@ -31,10 +36,13 @@ public class TimedDetonation : MonoBehaviour
 
     private void Detonate()
     {
+        Detonation.Invoke();
+        Rigidbody2D rigidbody = GetComponent<Rigidbody2D>();
+
         hasDetonated = true;
         DetonationEffect.Play();
         GetComponent<CircleCollider2D>().radius = DetonationRange;
-        GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        rigidbody.velocity = rigidbody.velocity.normalized * PostDetonationSpeed;
         Destroy(gameObject, DetonationDuration);
     }
 }

@@ -1,7 +1,8 @@
+Patch 2 to do:
 Brakering:
 - too little friction - Fixed
 Flamethrower:
-- Redesign entirely
+- Redesign entirely - Up for review
 Heat:
 - Check if attempted shot would exceed heat capacity - Fixed
 Missile:

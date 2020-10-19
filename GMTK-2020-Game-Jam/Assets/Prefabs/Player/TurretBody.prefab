@@ -3453,8 +3453,8 @@ MonoBehaviour:
   - {fileID: 613014548339529866}
   - {fileID: 5245054203076924615}
   - {fileID: 3428518286373111108}
-  heatCapacity: 10
-  heatDecayPerSecond: 1
+  heatCapacity: 6
+  heatDecayPerSecond: 0.6
   heatText: {fileID: 419893019468353600}
   GameOverParent: {fileID: 2206292945221747857}
   ExplosionParticle: {fileID: 3166519191012352185, guid: 525e5c6cfbe9bdb47b035d9efe556b7f,
