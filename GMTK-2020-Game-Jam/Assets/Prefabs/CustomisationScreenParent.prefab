@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 7751367522718681709}
   - component: {fileID: 3114932159976260029}
   m_Layer: 5
-  m_Name: Reverse Cannon
+  m_Name: Brake Ring
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -942,7 +942,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c4146bc19e9e64c95a7c96a9e58ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScoreRequirement: 7000
+  highScoreRequirement: 10000
   lockedImage: {fileID: 7746406875581252297}
   lockedText: {fileID: 1225829377633438694}
 --- !u!1 &2210849022900440095
@@ -2194,6 +2194,7 @@ GameObject:
   - component: {fileID: 2210849023696493208}
   - component: {fileID: 2210849023696493209}
   - component: {fileID: 2210849023696493210}
+  - component: {fileID: 7610017894889960683}
   m_Layer: 5
   m_Name: FC Button
   m_TagString: Untagged
@@ -2216,11 +2217,11 @@ RectTransform:
   - {fileID: 2210849024438888733}
   - {fileID: 2210849024646815018}
   m_Father: {fileID: 2210849024604643294}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2210849023696493208
@@ -2374,6 +2375,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7610017894889960683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2210849023696493212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c4146bc19e9e64c95a7c96a9e58ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScoreRequirement: 2000
+  lockedImage: {fileID: 2210849024438888732}
+  lockedText: {fileID: 2210849023741800801}
 --- !u!1 &2210849023741800802
 GameObject:
   m_ObjectHideFlags: 0
@@ -3106,11 +3122,11 @@ RectTransform:
   - {fileID: 2210849024278510539}
   - {fileID: 2210849024586094565}
   m_Father: {fileID: 2210849024114250505}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 0}
+  m_AnchoredPosition: {x: -300, y: 0}
   m_SizeDelta: {x: 100, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2210849023897993381
@@ -3732,8 +3748,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3283440421731501081}
   - {fileID: 2210849023897993432}
+  - {fileID: 3283440421731501081}
   - {fileID: 2210849024218618900}
   - {fileID: 2210849023746886005}
   - {fileID: 5350956056675219821}
@@ -4282,7 +4298,7 @@ GameObject:
   - component: {fileID: 2210849024438888731}
   - component: {fileID: 2210849024438888732}
   m_Layer: 5
-  m_Name: Heavy Cannon
+  m_Name: Flame Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4539,11 +4555,11 @@ RectTransform:
   - {fileID: 2210849023963891597}
   - {fileID: 2210849023575238225}
   m_Father: {fileID: 2210849024604643294}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -150, y: 0}
   m_SizeDelta: {x: 100, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2210849024582425757
@@ -4822,8 +4838,8 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8661157623400163314}
-  - {fileID: 2210849023696493211}
   - {fileID: 2210849024582425744}
+  - {fileID: 2210849023696493211}
   - {fileID: 2210849023967410688}
   - {fileID: 2715454302936679979}
   m_Father: {fileID: 2560455241935747484}
@@ -5405,7 +5421,7 @@ GameObject:
   - component: {fileID: 6765981760578398586}
   - component: {fileID: 6789628839478088700}
   m_Layer: 5
-  m_Name: Air Burst Cannon
+  m_Name: Heat Sink
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7374,7 +7390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c4146bc19e9e64c95a7c96a9e58ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScoreRequirement: 7000
+  highScoreRequirement: 6000
   lockedImage: {fileID: 3114932159976260029}
   lockedText: {fileID: 5157001352324654967}
 --- !u!1 &5998361934070456937
@@ -9344,6 +9360,7 @@ GameObject:
   - component: {fileID: 4641993817560873192}
   - component: {fileID: 4940263135738778721}
   - component: {fileID: 3114841195707735847}
+  - component: {fileID: 2786886944908568861}
   m_Layer: 5
   m_Name: HAC Button
   m_TagString: Untagged
@@ -9366,11 +9383,11 @@ RectTransform:
   - {fileID: 218113234913400058}
   - {fileID: 1219305951249239276}
   m_Father: {fileID: 2210849024114250505}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 0}
+  m_AnchoredPosition: {x: -150, y: 0}
   m_SizeDelta: {x: 100, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4641993817560873192
@@ -9524,6 +9541,21 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2786886944908568861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8155850944044542061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c4146bc19e9e64c95a7c96a9e58ddd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  highScoreRequirement: 1000
+  lockedImage: {fileID: 1636359324698027722}
+  lockedText: {fileID: 2210849023741800801}
 --- !u!1 &8158149468672235331
 GameObject:
   m_ObjectHideFlags: 0
@@ -9880,7 +9912,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0c4146bc19e9e64c95a7c96a9e58ddd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  highScoreRequirement: 5000
+  highScoreRequirement: 6500
   lockedImage: {fileID: 4743146664876302451}
   lockedText: {fileID: 2775934019497182594}
 --- !u!1 &8691185232603416518

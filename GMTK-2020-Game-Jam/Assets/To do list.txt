@@ -9,7 +9,7 @@ Missile:
 - Give missiles arming time - Fixed
 Customistation:
 - Balance unlock scores
-Heat sink:
+Heat sink: - Fixed
 - Fix issue where heat isn't instantly reduced to zero when ejecting - Fixed
 Waves
 - Adjust wave Balance
