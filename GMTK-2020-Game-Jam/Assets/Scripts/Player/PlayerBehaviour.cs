@@ -150,7 +150,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    public bool CheckHeat()
+    public bool CheckHeat(float addedHeat)
     {
         if(currentHeat < heatCapacity)
         {

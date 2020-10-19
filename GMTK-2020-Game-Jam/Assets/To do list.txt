@@ -1,9 +1,9 @@
 Brakering:
-- too little friction
+- too little friction - Fixed
 Flamethrower:
 - Redesign entirely
 Heat:
-- Check if attempted shot would exceed heat capacity
+- Check if attempted shot would exceed heat capacity - Fixed
 Missile:
 - Give missiles arming time
 Customistation:

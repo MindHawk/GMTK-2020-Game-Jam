@@ -54,7 +54,7 @@ public class ShootComponent : MonoBehaviour
     }
     public virtual void Shoot()
     {
-        if (_canShoot && player.CheckHeat())
+        if (_canShoot && player.CheckHeat(shotHeatGeneration))
         {
             _canShoot = false;
             StartCoroutine(ShotCooldown());
