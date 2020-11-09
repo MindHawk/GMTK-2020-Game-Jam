@@ -9,7 +9,13 @@ Missile:
 - Give missiles arming time - Fixed
 Customistation:
 - Balance unlock scores
+- Layering issue with missile cannon
+- Update discriptions
 Heat sink: - Fixed
 - Fix issue where heat isn't instantly reduced to zero when ejecting - Fixed
 Waves
 - Adjust wave Balance
+UI
+- Add propper heat UI
+WebGL
+- Remove quit game button
