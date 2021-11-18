@@ -35,6 +35,10 @@ public class LockUntilHighScore : MonoBehaviour
             GetComponent<Button>().interactable = false;
             lockedText.enabled = true;
             lockedImage.color = new Color(255, 255, 255, 0.5f); // transparency
+            foreach (Image image in lockedImage.gameObject.GetComponentsInChildren<Image>())
+            {
+                image.color = new Color(255, 255, 255, 0.5f);
+            }
         }
         else
         {
